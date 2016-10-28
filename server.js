@@ -75,7 +75,7 @@ function createBlog(){
             </body>
         </html>
         `;
-    
+    return blogTemplate;
 }
 
 
