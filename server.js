@@ -70,8 +70,8 @@ function createBlog(){
                     
     var blogTemplate3=`<ol start="1">`;
     
-    for(var i = 0;i < blogList.length;i++){
-        blogTemplate3 += `<a><li> ${blogList[i]}  </li></a>`;
+    for(var i = 1;i < blogList.length;i++){
+        blogTemplate3 += `<li onclick="getBlog(${i})"> ${blogList[i]} </li> `;
     }
     blogTemplate3 += `<ol>`;
     
