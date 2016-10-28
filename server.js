@@ -38,7 +38,7 @@ app.get('/blog', function (req, res) {
 });
 function createBlog(){
     var blogList = ["blog1","blog2","blog3","blog4"];
-
+    blogList = JSON.parse(blogList); 
     var blogTemplate = `<!DOCTYPE html>
         <html>
             <head>
