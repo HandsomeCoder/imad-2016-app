@@ -57,7 +57,7 @@ app.get('/blog', function (req, res) {
   res.send(createBlog());
 });
 
-app.get('/bolg/:blogNum', function (req, res) {
+app.get('/blog/:blogNum', function (req, res) {
   // SELECT * FROM article WHERE title = '\'; DELETE WHERE a = \'asdf'
   pool.query("SELECT title,date,content FROM blog WHERE id = $1", [req.params.blogNum], function (err, result) {
     if (err) {
