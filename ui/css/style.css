@@ -1,0 +1,40 @@
+body {
+    font-family: sans-serif;
+    background-color: #ff9966;
+    margin-top: 75px;
+}
+
+.margin-left{
+    margin-left: 50px;
+}
+.center {
+    text-align: center;
+}
+
+.text-big {
+    font-size: 300%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.imgContainer{
+    margin-left: 36%;
+    display: inline-block;
+    border: 3px #ffffff solid;
+    border-radius: 50%;
+}
+
+.img-medium {
+    height: 300px;
+    border-radius: 50%;
+}
+
+
+
+.buttonContainer{
+   display: inline-block;
+   margin-left: 33%;
+   margin-top: 20px;
+}
