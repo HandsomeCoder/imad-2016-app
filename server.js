@@ -39,7 +39,7 @@ app.get('/blog', function (req, res) {
 function createBlog(){
     var blogList = ["blog1","blog2","blog3","blog4"];
     var dis;
-    var blogTemplate = `<!DOCTYPE html>
+    var blogTemplate1 = `<!DOCTYPE html>
         <html>
             <head>
                 <title>Blog</title>
@@ -62,20 +62,9 @@ function createBlog(){
                     </a>
                 </nav>
                 <section id="container">
-                    <section id="menuBar">
-                    <table>
-  <tr>
-    <th>id</th><th>Name</th>
-  </tr>
-
-  <% for (var i = 0; i < data.length; i++) { %>
-    <tr>
-      <td><%= data[i].id %></td>
-      <td><%= data[i].name %></td>
-    </tr>    
-  <% } %>
-</table>
-                    </section>
+                    <section id="menuBar">`;
+    
+    var blogTemplate2 = `</section>
                     <section id="displayReg">
                     </section>
                     vjkkjbkl
@@ -83,7 +72,7 @@ function createBlog(){
             </body>
         </html>
         `;
-    return blogTemplate;
+    return blogTemplate1+blogTempalate2;
 }
 
 
