@@ -72,7 +72,7 @@ function createBlog(){
             </body>
         </html>
         `;
-    return blogTemplate1+blogTempalate2;
+    return blogTemplate1+blogTemplate2;
 }
 
 
