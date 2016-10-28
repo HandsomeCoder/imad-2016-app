@@ -64,11 +64,12 @@ function createBlog(){
                 <section id="container">
                     <section id="menuBar">`;
                     
-    var blogTemplate3;
+    var blogTemplate3=`<ol start="1">`;
     
     for(var i = 0;i < blogList.length;i++){
-        blogTemplate3 += `${blogList[i]}`;
+        blogTemplate3 += `<li><a href="#"> ${blogList[i]} </a> </li>`;
     }
+    blogTemplate3 += `<ol>`;
     
     var blogTemplate2 = `</section>
                     <section id="displayReg">
