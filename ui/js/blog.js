@@ -13,7 +13,7 @@ function getBlog(x){
     };
     
     // Make the request
-    request.open('GET', 'http://coco98.imad.hasura-app.io/'+$x, true);
+    request.open('GET', 'http://coco98.imad.hasura-app.io/'+$x.toString(), true);
     request.send(null);
 }
 
