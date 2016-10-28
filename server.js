@@ -63,10 +63,6 @@ function createBlog(){
                 </nav>
                 <section id="container">
                     <section id="menuBar">
-                    `;
-                    for(var i = 0;i < blogLsit.length;i++){
-                        
-                    }`
                         Menu Region
                     </section>
                     <section id="displayReg">
