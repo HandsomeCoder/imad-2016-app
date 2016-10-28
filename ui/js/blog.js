@@ -14,7 +14,7 @@ function getBlog(x){
     };
     
     // Make the request
-    request.open('GET', 'http://coco98.imad.hasura-app.io/blog/'+x.toString(), true);
+    request.open('GET', 'http://coco98.imad.hasura-app.io/blog/'+x, true);
     request.send(null);
 }
 
