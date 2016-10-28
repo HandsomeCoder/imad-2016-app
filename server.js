@@ -64,14 +64,13 @@ function createBlog(){
                 <section id="container">
                     <section id="menuBar">`;
                         for(var i = 0;i < blogList.length;i++){
-                            dis = blogList[i];`
-                            ${dis}
-                            `;
+                            dis = blogList[i];
+                            `${dis}`;
                         }
-                        `
-                    </section>
+                    `</section>
                     <section id="displayReg">
                     </section>
+                    vjkkjbkl
                 </section>
             </body>
         </html>
