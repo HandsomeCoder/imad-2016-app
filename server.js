@@ -71,7 +71,7 @@ function createBlog(){
     var blogTemplate3=`<ol start="1">`;
     
     for(var i = 0;i < blogList.length;i++){
-        blogTemplate3 += `<li><a href="#"> ${blogList[i]} </a> </li>`;
+        blogTemplate3 += `<a href="#"><li> ${blogList[i]}  </li></a>`;
     }
     blogTemplate3 += `<ol>`;
     
