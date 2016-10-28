@@ -45,8 +45,8 @@ function createBlog(){
                 <title>Blog</title>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link href="site.css" rel="stylesheet"/>
-                <link href="blog.css" rel="stylesheet"/>
+                <link href="../../ui/site.css" rel="stylesheet"/>
+                <link href="../../ui/blog.css" rel="stylesheet"/>
             </head>
             <body>
                 <nav>
