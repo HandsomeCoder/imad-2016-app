@@ -38,7 +38,7 @@ app.get('/blog', function (req, res) {
 });
 function createBlog(){
     var blogList = ["blog1","blog2","blog3","blog4"];
-    blogList = JSON.parse(blogList); 
+    var dis;
     var blogTemplate = `<!DOCTYPE html>
         <html>
             <head>
@@ -64,7 +64,9 @@ function createBlog(){
                 <section id="container">
                     <section id="menuBar">`;
                         for(var i = 0;i < blogList.length;i++){
-                            $blogList[i];
+                            dis = blogList[i];`
+                            ${dis}
+                            `;
                         }
                         `
                     </section>
