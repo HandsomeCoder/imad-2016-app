@@ -1,6 +1,15 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var Pool = require('pg').Pool;
+
+var config = {
+    user: '',
+    database: 'coco98',
+    host: 'db.imad.hasura-app.io',
+    port: '5432',
+    password: process.env.DB_PASSWORD
+};
 
 var app = express();
 app.use(morgan('combined'));
@@ -33,7 +42,6 @@ app.get('/ui/js/blog.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/js', 'blog.js'));
 });
 
-
 app.get('/ui/images/ME_0.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/images', 'ME_0.jpg'));
 });
@@ -45,6 +53,11 @@ app.get('/ui/images/ME_2.jpg', function (req, res) {
 app.get('/blog', function (req, res) {
   res.send(createBlog());
 });
+
+app.get('/blog', function (req, res) {
+  res.send(createBlog());
+});
+
 function createBlog(){
     var blogList = ["blog1","blog2","blog3","blog4"];
     var dis;
