@@ -1,0 +1,30 @@
+#container{
+    margin-top: 20px;
+    display: flex;
+}
+
+#menuBar{
+    margin: 5px;
+    flex-grow: 1;
+}
+
+#displayReg{
+    margin: 5px;
+    border: 1px #000000 solid; 
+    flex-grow: 3;
+}
+li{
+    border: 1px #ff9966 solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-indent: 10px;
+}
+
+li > a{
+    text-decoration: none;
+    color: #000000;
+}
+li:hover{
+    border: 1px #000000 solid;
+    border-radius: 4px;
+}
