@@ -29,6 +29,11 @@ app.get('/ui/html/profile.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/html', 'profile.html'));
 });
 
+app.get('/ui/js/blog.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/js', 'blog.js'));
+});
+
+
 app.get('/ui/images/ME_0.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/images', 'ME_0.jpg'));
 });
@@ -80,7 +85,7 @@ function createBlog(){
                         <h1> &#8592; Select Blog on Left panel </h1>
                     </section>
                 </section>
-                <script src="blog.js"></script>
+                <script src="ui/js/blog.js"></script>
             </body>
         </html>
         `;
