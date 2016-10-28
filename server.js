@@ -63,6 +63,12 @@ function createBlog(){
                 </nav>
                 <section id="container">
                     <section id="menuBar">`;
+                    
+    var blogTemplate3;
+    
+    for(var i = 0;i < blogList.length;i++){
+        blogTemplate3 += `${blogList[i]}`;
+    }
     
     var blogTemplate2 = `</section>
                     <section id="displayReg">
@@ -72,7 +78,7 @@ function createBlog(){
             </body>
         </html>
         `;
-    return blogTemplate1+blogTemplate2;
+    return blogTemplate1+blogTemplate2+blogTemplate3;
 }
 
 
