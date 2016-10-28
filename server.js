@@ -62,12 +62,20 @@ function createBlog(){
                     </a>
                 </nav>
                 <section id="container">
-                    <section id="menuBar">`;
-                        for(var i = 0;i < blogList.length;i++){
-                            dis = blogList[i];
-                            `${dis}`;
-                        }
-                    `</section>
+                    <section id="menuBar">
+                    <table>
+  <tr>
+    <th>id</th><th>Name</th>
+  </tr>
+
+  <% for (var i = 0; i < data.length; i++) { %>
+    <tr>
+      <td><%= data[i].id %></td>
+      <td><%= data[i].name %></td>
+    </tr>    
+  <% } %>
+</table>
+                    </section>
                     <section id="displayReg">
                     </section>
                     vjkkjbkl
