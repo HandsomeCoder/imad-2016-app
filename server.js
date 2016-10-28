@@ -50,7 +50,7 @@ function createBlog(){
             </head>
             <body>
                 <nav>
-                    <a href="index.html">
+                    <a href="/">
                         <div class="operationalButton">
                             &#8592; Back
                         </div>
@@ -62,8 +62,11 @@ function createBlog(){
                     </a>
                 </nav>
                 <section id="container">
-                    <section id="menuBar">
-                        Menu Region
+                    <section id="menuBar">`;
+                        for(var i = 0;i < blogList.length;i++){
+                            $blogList.get(i);
+                        }
+                        `
                     </section>
                     <section id="displayReg">
                     </section>
