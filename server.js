@@ -64,7 +64,7 @@ function createBlog(){
                 <section id="container">
                     <section id="menuBar">`;
                         for(var i = 0;i < blogList.length;i++){
-                            $blogList.get(i);
+                            $blogList[i];
                         }
                         `
                     </section>
