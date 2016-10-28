@@ -5,11 +5,13 @@ var Pool = require('pg').Pool;
 
 var config = {
     user: '',
-    database: 'coco98',
+    database: 'handsomecoder',
     host: 'db.imad.hasura-app.io',
     port: '5432',
     password: process.env.DB_PASSWORD
 };
+
+var pool = new Pool(config);
 
 var app = express();
 app.use(morgan('combined'));
@@ -50,12 +52,24 @@ app.get('/ui/images/ME_2.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/images', 'ME_2.jpg'));
 });
 
+
 app.get('/blog', function (req, res) {
   res.send(createBlog());
 });
 
-app.get('/blog', function (req, res) {
-  res.send(createBlog());
+app.get('/:blogNum', function (req, res) {
+  // SELECT * FROM article WHERE title = '\'; DELETE WHERE a = \'asdf'
+  pool.query("SELECT title,date,content FROM blog WHERE id = $1", [req.params.blogNum], function (err, result) {
+    if (err) {
+        res.status(500).send(err.toString());
+    } else {
+        if (result.rows.length === 0) {
+            res.status(404).send('Article not found');
+        } else {
+            res.send(result.rows[0]);
+        }
+    }
+  });
 });
 
 function createBlog(){
