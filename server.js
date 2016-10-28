@@ -78,7 +78,6 @@ function createBlog(){
     var blogTemplate2 = `</section>
                     <section id="displayReg">
                     </section>
-                    vjkkjbkl
                 </section>
             </body>
         </html>
