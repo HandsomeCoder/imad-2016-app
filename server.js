@@ -33,7 +33,7 @@ app.get('/ui/images/ME_2.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/images', 'ME_2.jpg'));
 });
 
-app.get('/ui/blog', function (req, res) {
+app.get('/blog', function (req, res) {
   res.send(createBlog);
 });
 function createBlog(){
