@@ -6,7 +6,8 @@ function getBlog(x){
       if (request.readyState === XMLHttpRequest.DONE) {
           // Take some action
           if (request.status === 200) {
-    
+                var blogContent = request.responseText;
+                document.getElementById('displayReg').innerHTML = blogContent.toString();   
           }
       }  
       // Not done yet
