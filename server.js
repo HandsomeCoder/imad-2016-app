@@ -77,6 +77,7 @@ function createBlog(){
     
     var blogTemplate2 = `</section>
                     <section id="displayReg">
+                        <h1> &#8592; Select Blog on Left panel </h1>
                     </section>
                 </section>
             </body>
