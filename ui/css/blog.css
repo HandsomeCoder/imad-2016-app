@@ -24,13 +24,10 @@ li{
     text-indent: 10px;
 }
 
-ol > a{
-    text-decoration: none;
-    color: #000000;
-}
 li:hover{
     border: 1px #000000 solid;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 h1{
