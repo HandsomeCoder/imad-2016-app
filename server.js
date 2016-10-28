@@ -21,6 +21,10 @@ app.get('/ui/css/profile.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/css', 'profile.css'));
 });
 
+app.get('/ui/css/blog.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/css', 'blog.css'));
+});
+
 app.get('/ui/html/profile.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/html', 'profile.html'));
 });
