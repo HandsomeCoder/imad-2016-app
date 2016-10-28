@@ -18,7 +18,7 @@ app.get('/ui/css/site.css', function (req, res) {
 });
 
 app.get('/ui/css/profile.css', function (req, res) {
-  res.sendFile(path.join(__dirname, '../ui/css', 'profile.css'));
+  res.sendFile(path.join(__dirname, '../../ui/css', 'profile.css'));
 });
 
 app.get('/ui/html/profile.html', function (req, res) {
