@@ -34,7 +34,7 @@ app.get('/ui/images/ME_2.jpg', function (req, res) {
 });
 
 app.get('/blog', function (req, res) {
-  res.send(createBlog);
+  res.send(createBlog());
 });
 function createBlog(){
     var blogList = ["blog1","blog2","blog3","blog4"];
