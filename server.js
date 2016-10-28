@@ -80,6 +80,7 @@ function createBlog(){
                         <h1> &#8592; Select Blog on Left panel </h1>
                     </section>
                 </section>
+                <script src="blog.js"></script>
             </body>
         </html>
         `;
