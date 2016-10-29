@@ -106,10 +106,14 @@ app.get('/blog/q/title', function (req, res) {
       if(err){
           
       }else{
-          for(var i = 0;i < rows.length;i++){
+          for(i = 0;i < rows.length;i++){
               blogList.push(rows[0].title);
           }
-          res.send(createTitleContent(blogList));
+          var titleContent;
+            for(i = 0;i < data.lenght;i++){
+                titleContent += `<li onclick="getBlog(${i})> ${data[i]} </li>"`;
+            }
+          res.send(titleContent);
       } 
    });
 });
@@ -176,7 +180,7 @@ function createBlogContent(data){
     return blogTemp;
 }
 
-function createTitleContent(data){
+function createTitleContent(index,item){
     var titleContent;
     for(var i = 0;i < data.lenght;i++){
         titleContent += `<li onclick="getBlog(${i})> ${data[i]} </li>"`;
