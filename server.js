@@ -72,6 +72,7 @@ app.get('/blog/:blogNum', function (req, res) {
 });
 
 app.get('/blog/q/db', function (req, res) {
+    var blogList = [];
     pool.query("SELECT title FROM blog", function (err, result) {
         if (err) {
             res.status(500).send(err.toString());
@@ -79,7 +80,10 @@ app.get('/blog/q/db', function (req, res) {
             if (result.rows.length === 0) {
                 res.status(404).send('Blog not found');
             } else {
-                res.send(result.rows[0].title);
+                for(var i = 0;i < result.rows.length;i++){
+                    blogList.push(result.rows[0].title);
+                }
+                res.send(blogList);
             }
         }
     });
@@ -95,7 +99,9 @@ function createBlog(){
             if (result.rows.length === 0) {
                 res.status(404).send('Blog not found');
             } else {
-                blogList = result.rows[0];
+                for(var i = 0;i < result.rows.length;i++){
+                    blogList.push(result.rows[0].title);
+                }
             }
         }
     });
