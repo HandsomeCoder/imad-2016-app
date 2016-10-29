@@ -116,7 +116,7 @@ app.get('/blog/q/db', function (req, res) {
 
 function createBlog(){
     var blogList = [];
-
+    var blogTemplate3;
     var dis;
     var blogTemplate1 = `<!DOCTYPE html>
         <html>
