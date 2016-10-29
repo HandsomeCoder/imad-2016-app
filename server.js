@@ -73,7 +73,7 @@ app.get('/blog/:blogNum', function (req, res) {
 
 function createBlog(){
     var blogList =[];
-    
+/*    
     pool.query("SELECT title FROM blog", function (err, result) {
         if (err) {
             res.status(500).send(err.toString());
@@ -87,7 +87,7 @@ function createBlog(){
             }
         }
     });
-    
+  */  
     var dis;
     var blogTemplate1 = `<!DOCTYPE html>
         <html>
