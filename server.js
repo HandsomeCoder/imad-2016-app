@@ -110,7 +110,7 @@ app.get('/blog/q/title', function (req, res) {
               blogList.push(rows[i].title);
           }
           var titleContent;
-          for(i = 0;i < blogList.length;i++){
+          for(i = 1;i < blogList.length;i++){
             titleContent += `<li onclick="getBlog(${i})"> ${blogList[i]} </li>`;
            }
           res.send(titleContent);
