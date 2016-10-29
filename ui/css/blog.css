@@ -36,12 +36,14 @@ nav{
     border-radius: 5px;
     width: 75%;
     height: 75vh;
+    
 }
 li{
     border: 1px #ff9966 solid;
     padding-top: 5px;
     padding-bottom: 5px;
     text-indent: 10px;
+    margin-right: 10px;
 }
 
 li:hover{
