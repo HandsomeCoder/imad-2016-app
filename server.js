@@ -88,7 +88,7 @@ function getBlogTitle(){
         }
     });
   
-    createBlog(blogList);
+    return createBlog(blogList);
 }
 
 function createBlog(blogList){
