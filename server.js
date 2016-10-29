@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
-//var wait=require('wait.for');
+var wait=require('wait.for');
 //var sleep = require('sleep');
 
 var config = {
