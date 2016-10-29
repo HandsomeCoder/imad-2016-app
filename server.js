@@ -56,7 +56,67 @@ app.get('/ui/images/ME_2.jpg', function (req, res) {
 
 
 app.get('/blog', function (req, res) {
-  res.send(createBlog());
+      var blogList = [];
+    var blogTemplate3;
+    var dis;
+    var blogTemplate1 = `<!DOCTYPE html>
+        <html>
+            <head>
+                <title>Blog</title>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link href="ui/css/site.css" rel="stylesheet"/>
+                <link href="ui/css/blog.css" rel="stylesheet"/>
+            </head>
+            <body>
+            <nav>
+                <a href="index.html">
+                    <div id="backButton" class="operationalButton">
+                        &#8592; Back
+                    </div>
+                </a>
+                <div id="pageTitle">
+                    My Blog...!!!
+                </div>
+                <a href="#">
+                    <div id="pageButton"class="operationalButton">
+                        Profile Page
+                    </div>
+                </a>
+            </nav>
+                <section id="container">
+                    <section id="menuBar">`;
+                    
+    var blogTemplate2 = `</section>
+                    <section id="displayReg">
+                        <h1> &#8592; Select Blog on Left panel </h1>
+                    </section>
+                </section>
+                <script src="ui/js/blog.js"></script>
+            </body>
+        </html>`;
+        
+   getResult("SELECT title FROM blog",function(err,rows){
+      if(err){
+          
+      }else{
+          for(var i = 0;i < rows.length;i++){
+              blogList.push(rows[0].title);
+          }
+        blogTemplate3=`<ol start="1">`;
+    
+        for(var j = 0;j < blogList.length;k++){
+            blogTemplate3 += `<li onclick="getBlog(${j})"> ${blogList[j]} </li> `;
+        }
+        blogTemplate3 += `</ol>`;
+        res.send(blogTemplate1+blogTemplate3+blogTemplate2);
+      } 
+   });
+   
+
+   
+   
+    
 });
 
 app.get('/blog/:blogNum', function (req, res) {
