@@ -125,9 +125,10 @@ function createBlog(){
               log += "In";
               blogList.push(rows[0].title);
           }
-          return log;
+          
       } 
    });
+   return blogList;
 //   sleep.sleep(2);
    
 /*  
