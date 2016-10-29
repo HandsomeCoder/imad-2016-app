@@ -88,7 +88,7 @@ function createBlog(){
         }
     });
   
-    console.write(blogList);
+    console.log(blogList);
     var dis;
     var blogTemplate1 = `<!DOCTYPE html>
         <html>
