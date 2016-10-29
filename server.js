@@ -120,7 +120,7 @@ function createBlog(){
     for(var i = 0;i < blogList.length;i++){
         blogTemplate3 += `<li onclick="getBlog(${i})"> ${blogList[i]} </li> `;
     }
-    blogTemplate3 += `<ol>`;
+    blogTemplate3 += `</ol>`;
     
     var blogTemplate2 = `</section>
                     <section id="displayReg">
