@@ -100,7 +100,7 @@ function getResult(str,callback){
     });
 }
 
-app.get('/blog/title', function (req, res) {
+app.get('/blog/q/title', function (req, res) {
     var blogList = [];
    getResult("SELECT title FROM blog",function(err,rows){
       if(err){
