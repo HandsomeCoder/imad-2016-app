@@ -54,7 +54,7 @@ app.get('/ui/images/ME_2.jpg', function (req, res) {
 
 
 app.get('/blog', function (req, res) {
-  res.send(createBlog());
+  res.send(getBlogTitle());
 });
 
 app.get('/blog/:blogNum', function (req, res) {
@@ -71,7 +71,7 @@ app.get('/blog/:blogNum', function (req, res) {
   });
 });
 
-function createBlog(){
+function getBlogTitle(){
     var blogList =[];
     
     pool.query("SELECT title FROM blog", function (err, result) {
@@ -88,7 +88,11 @@ function createBlog(){
         }
     });
   
-    console.log(blogList);
+    createBlog(blogList);
+}
+
+function createBlog(blogList){
+
     var dis;
     var blogTemplate1 = `<!DOCTYPE html>
         <html>
