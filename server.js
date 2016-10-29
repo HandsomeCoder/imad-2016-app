@@ -150,7 +150,7 @@ function createBlog(){
                             click to load Title
                         </div>
                         <div id="titleSection">
-                        <ol start="1">
+                        <ol id="blogTitle" start="1">
         
                         </ol>    
                         </div>
