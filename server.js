@@ -106,8 +106,9 @@ function createBlog(){
     var blogList =[];
     var log = "out";
    executeQuery("SELECT title FROM blog",function(err,rows){
+      log+="func";
       if(err){
-          
+         log+="err"; 
       }else{
           for(var i = 0;i < rows.length;i++){
               log += "In";
