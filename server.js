@@ -81,13 +81,29 @@ app.get('/blog/q/db', function (req, res) {
                 res.status(404).send('Blog not found');
             } else {
                 for(var i = 0;i < result.rows.length;i++){
-                    blogList.push(result.rows[0].title);
+                    blogList.push(result.rows);
                 }
                 res.send(blogList);
             }
         }
     });
 });
+
+
+function executeQuery(str,callback){
+    pool.query(str,function(err,result){
+        if (err) {
+            res.status(500).send(err.toString());
+        } else {
+            if (result.rows.length === 0) {
+                res.status(404).send('Query not found');
+            } else {
+                callback(result.rows)
+            }
+        }
+    })
+}
+
 
 function createBlog(){
     var blogList =[];
