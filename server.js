@@ -162,16 +162,17 @@ function createBlog(){
           for(var i = 0;i < rows.length;i++){
               blogList.push(rows[0].title);
           }
+        blogTemplate3=`<ol start="1">`;
+    
+        for(var j = 0;j < blogList.length;k++){
+            blogTemplate3 += `<li onclick="getBlog(${j})"> ${blogList[j]} </li> `;
+        }
+        blogTemplate3 += `</ol>`;
           
       } 
    });
    
-    var blogTemplate3=`<ol start="1">`;
-    
-    for(var i = 0;i < blogList.length;i++){
-        blogTemplate3 += `<li onclick="getBlog(${i})"> ${blogList[i]} </li> `;
-    }
-    blogTemplate3 += `</ol>`;
+
    
    
     return blogTemplate1+blogTemplate3+blogTemplate2;
