@@ -81,7 +81,7 @@ function createBlog(){
             if (result.rows.length === 0) {
                 res.status(404).send('Blog not found');
             } else {
-                blogList = result.rows[0];
+                blogList = result;
             }
         }
     });
