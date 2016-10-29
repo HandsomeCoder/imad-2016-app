@@ -45,9 +45,9 @@ li{
 }
 
 li:hover{
-    border: 1px #000000 solid;
+    color: #ffffff;
+    border: 1px #ffffff solid;
     border-radius: 4px;
-    cursor: pointer;
 }
 
 h1{
