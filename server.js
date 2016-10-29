@@ -115,10 +115,11 @@ function createBlog(){
               log += "In";
               blogList.push(rows[0].title);
           }
+          return log;
       } 
    });
 //   sleep.sleep(2);
-   return log;
+   
 /*  
     var dis;
     var blogTemplate1 = `<!DOCTYPE html>
