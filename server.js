@@ -115,15 +115,11 @@ app.get('/blog/q/db', function (req, res) {
 });
 
 function createBlog(){
-    var blogList = [];
-    getResult("SELECT title FROM blog",function(err,rows){
+    var blogList = getResult("SELECT title FROM blog",function(err,rows){
       if(err){
           
       }else{
-          for(var i = 0;i < rows.length;i++){
-              blogList.push(rows[0].title);
-          }
-          
+        return rows;
       } 
    });
    return (blogList);
