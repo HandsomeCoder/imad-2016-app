@@ -116,7 +116,7 @@ app.get('/blog/q/db', function (req, res) {
 
 function createBlog(){
     var blogList = [];
-   wait.for(getResult("SELECT title FROM blog",function(err,rows){
+    getResult("SELECT title FROM blog",function(err,rows){
       if(err){
           
       }else{
@@ -125,8 +125,7 @@ function createBlog(){
           }
           
       } 
-   })
-   );
+   });
    return (blogList);
 //   sleep.sleep(2);
    
