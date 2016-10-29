@@ -92,7 +92,7 @@ function getBlogTitle(){
 }
 
 function createBlog(blogList){
-
+/*
     var dis;
     var blogTemplate1 = `<!DOCTYPE html>
         <html>
@@ -151,8 +151,8 @@ function createBlogContent(data){
                   <hr>
                   <p class="margin">
                     ${content}
-                  </p>`;
-    return blogTemp;
+                  </p>`;*/
+    return blogList;
 }
 
 
