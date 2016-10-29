@@ -25,7 +25,7 @@ nav{
 
 #menuBar{
     margin: 5px;
-    flex-grow: 1;
+    width: 25%;
     border: 3px #000000 solid;
     border-radius: 5px;
 }
@@ -34,7 +34,7 @@ nav{
     margin: 5px;
     border: 3px #000000 solid;
     border-radius: 5px;
-    flex-grow: 3;
+    width: 75%;
     height: 75vh;
 }
 li{
