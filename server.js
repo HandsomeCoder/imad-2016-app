@@ -106,7 +106,7 @@ app.get('/blog/q/title', function (req, res) {
       if(err){
           
       }else{
-          for(i = 1;i < rows.length;i++){
+          for(i = 0;i < rows.length;i++){
               blogList.push(rows[i].title);
           }
           var titleContent;
