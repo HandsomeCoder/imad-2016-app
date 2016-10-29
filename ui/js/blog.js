@@ -19,12 +19,12 @@ function getTitle(){
     request.onreadystatechange = function () {
     if (request.readyState === XMLHttpRequest.DONE) {
           if (request.status === 200) {
-                var blogContent = request.responseText;
-                document.getElementById('displayReg').innerHTML = blogContent.toString();   
+                var blogTitle = request.responseText;
+                document.getElementById('blogTitle').innerHTML = blogTitle.toString();   
           }
       }  
     };
     
-    request.open('GET', 'http://handsomecoder.imad.hasura-app.io/blog/title', true);
+    request.open('GET', 'http://handsomecoder.imad.hasura-app.io/blog/q/title', true);
     request.send(null);
 }
