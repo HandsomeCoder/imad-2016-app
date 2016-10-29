@@ -72,7 +72,20 @@ app.get('/blog/:blogNum', function (req, res) {
 });
 
 function createBlog(){
-    var blogList = ["blog1","blog2","blog3","blog4"];
+    var blogList;
+    
+    pool.query("SELECT title FROM blog", function (err, result) {
+        if (err) {
+            res.status(500).send(err.toString());
+        } else {
+            if (result.rows.length === 0) {
+                res.status(404).send('Blog not found');
+            } else {
+                blogList = result.rows[0];
+            }
+        }
+    });
+    
     var dis;
     var blogTemplate1 = `<!DOCTYPE html>
         <html>
