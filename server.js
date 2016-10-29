@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
-var sleep = require('sleep');
+//var sleep = require('sleep');
 
 var config = {
     user: '',
@@ -117,7 +117,7 @@ function createBlog(){
           }
       } 
    });
-   sleep.sleep(2);
+//   sleep.sleep(2);
    return log;
 /*  
     var dis;
