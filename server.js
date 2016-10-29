@@ -110,9 +110,9 @@ app.get('/blog/q/title', function (req, res) {
               blogList.push(rows[0].title);
           }
           var titleContent = "in";
-         /* for(i = 0;i < blogList.length;i++){
-            titleContent += `<li onclick="getBlog(${i})> ${data[i]} </li>"`;
-            }*/
+          for(i = 0;i < blogList.length;i++){
+            titleContent += `<li onclick="getBlog(${i})> ${data[i]} </li>`;
+            }1
           res.send(titleContent);
       } 
    });
