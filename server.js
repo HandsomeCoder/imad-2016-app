@@ -107,7 +107,7 @@ app.get('/blog/q/title', function (req, res) {
           
       }else{
           for(i = 0;i < rows.length;i++){
-              blogList.push(rows[0].title);
+              blogList.push(rows[i].title);
           }
           var titleContent;
           for(i = 0;i < blogList.length;i++){
