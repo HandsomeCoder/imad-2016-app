@@ -103,13 +103,12 @@ app.get('/blog/q/db', function (req, res) {
 });
 
 function createBlog(){
-
+    var blogList =[];
     
    executeQuery("SELECT title FROM blog",function(err,rows){
       if(err){
           
       }else{
-          blogList =[];
           for(var i = 0;i < rows.length;i++){
               blogList.push(rows[0].title);
           }
