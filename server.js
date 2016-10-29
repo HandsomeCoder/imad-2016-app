@@ -72,7 +72,7 @@ app.get('/blog/:blogNum', function (req, res) {
 });
 
 function getBlogTitle(){
-    var blogList =[];
+    var blogList;
     
     pool.query("SELECT title FROM blog", function (err, result) {
         if (err) {
