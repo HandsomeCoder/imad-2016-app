@@ -71,24 +71,6 @@ app.get('/blog/:blogNum', function (req, res) {
   });
 });
 
-app.get('/blog/q/db', function (req, res) {
-    var blogList = [];
-    pool.query("SELECT title FROM blog", function (err, result) {
-        if (err) {
-            res.status(500).send(err.toString());
-        } else {
-            if (result.rows.length === 0) {
-                res.status(404).send('Blog not found');
-            } else {
-                for(var i = 0;i < result.rows.length;i++){
-                    blogList.push(result.rows[0].title);
-                }
-                res.send(blogList);
-            }
-        }
-    });
-});
-
 function createBlog(){
     var blogList =[];
     
@@ -106,6 +88,7 @@ function createBlog(){
         }
     });
   
+    console.write(blogList);
     var dis;
     var blogTemplate1 = `<!DOCTYPE html>
         <html>
