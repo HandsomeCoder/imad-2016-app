@@ -15,7 +15,7 @@ body {
     color: #000000;
 }
 
-a:hover > div{
+.operationalButton:hover{
     color: #ffffff;
     border-color: #ffffff;
 }
