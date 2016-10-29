@@ -179,7 +179,7 @@ function createBlogContent(data){
 function createTitleContent(data){
     var titleContent;
     for(var i = 0;i < data.lenght;i++){
-        title += `<li onclick="getBlog(${i})> ${data[i]} </li>"`;
+        titleContent += `<li onclick="getBlog(${i})> ${data[i]} </li>"`;
     }
     return titleContent;
 }
