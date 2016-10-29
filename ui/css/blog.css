@@ -64,3 +64,9 @@ h1{
 hr{
     border:2px #000000 solid;
 }
+
+
+.pointer{
+    cursor: pointer;
+    margin: 5px 20%;
+}
