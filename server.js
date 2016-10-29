@@ -130,7 +130,7 @@ function createBlog(){
             </head>
             <body>
             <nav>
-                <a href="index.html">
+                <a href="/">
                     <div id="backButton" class="operationalButton">
                         &#8592; Back
                     </div>
@@ -138,7 +138,7 @@ function createBlog(){
                 <div id="pageTitle">
                     My Blog...!!!
                 </div>
-                <a href="#">
+                <a href="ui/html/profile.html">
                     <div id="pageButton"class="operationalButton">
                         Profile Page
                     </div>
