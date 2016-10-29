@@ -1,3 +1,23 @@
+nav{
+    display: flex;
+}
+
+#pageTitle{
+    flex-grow: 3;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+#backButton{
+    flex-grow: 1;
+}
+
+#pageButton{
+    flex-grow: 1;
+}
+
 #container{
     margin-top: 20px;
     display: flex;
@@ -32,4 +52,15 @@ li:hover{
 
 h1{
     text-align: center;
+}
+
+.right-align{
+    text-align: right;
+}
+.margin{
+    margin: 25px;
+}
+
+hr{
+    border:2px #000000 solid;
 }
