@@ -110,12 +110,12 @@ function createBlog(){
           
       }else{
           for(var i = 0;i < rows.length;i++){
-              console.log("In")
+              console.log("In");
               blogList.push(rows[0].title);
           }
       } 
    });
-   return blogList
+   return blogList;
 /*  
     var dis;
     var blogTemplate1 = `<!DOCTYPE html>
