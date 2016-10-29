@@ -2,6 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
+wait=require('wait.for');
 //var sleep = require('sleep');
 
 var config = {
@@ -115,7 +116,7 @@ app.get('/blog/q/db', function (req, res) {
 
 function createBlog(){
     var blogList = [];
-   getResult("SELECT title FROM blog",function(err,rows){
+   wait.for(getResult("SELECT title FROM blog",function(err,rows){
       if(err){
           
       }else{
@@ -124,7 +125,8 @@ function createBlog(){
           }
           
       } 
-   });
+   })
+   );
    return (blogList);
 //   sleep.sleep(2);
    
