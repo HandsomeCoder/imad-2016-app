@@ -146,7 +146,7 @@ function createBlog(){
             </nav>
                 <section id="container">
                     <section id="menuBar">
-                        <div class="operationalButton pointer" onclick="getTitles()">
+                        <div class="operationalButton pointer" onclick="getTitle()">
                             click to load Title
                         </div>
                         <div id="titleSection">
