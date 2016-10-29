@@ -58,7 +58,7 @@ app.get('/blog', function (req, res) {
 });
 
 app.get('/blog/:blogNum', function (req, res) {
-  pool.query("SELECT content FROM blog WHERE id = $1", [req.params.blogNum], function (err, result) {
+  pool.query("SELECT title,date,content FROM blog WHERE id = $1", [req.params.blogNum], function (err, result) {
     if (err) {
         res.status(500).send(err.toString());
     } else {
