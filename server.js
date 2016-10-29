@@ -115,10 +115,7 @@ app.get('/blog/q/db', function (req, res) {
 });
 
 function createBlog(){
-    var blogList = [];
-    var blogTemplate3;
-    var dis;
-    var blogTemplate1 = `<!DOCTYPE html>
+    var blogTemplate = `<!DOCTYPE html>
         <html>
             <head>
                 <title>Blog</title>
@@ -162,27 +159,7 @@ function createBlog(){
             </body>
         </html>`;
         
-   getResult("SELECT title FROM blog",function(err,rows){
-      if(err){
-          
-      }else{
-          for(var i = 0;i < rows.length;i++){
-              blogList.push(rows[0].title);
-          }
-        blogTemplate3=`<ol start="1">`;
-    
-        for(var j = 0;j < blogList.length;k++){
-            blogTemplate3 += `<li onclick="getBlog(${j})"> ${blogList[j]} </li> `;
-        }
-        blogTemplate3 += `</ol>`;
-          
-      } 
-   });
-   
-
-   
-   
-    return blogTemplate1+blogTemplate3+blogTemplate2;
+    return blogTemplate;
 }
 
 function createBlogContent(data){
