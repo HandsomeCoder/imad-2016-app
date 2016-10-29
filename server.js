@@ -109,7 +109,7 @@ app.get('/blog/q/title', function (req, res) {
           for(i = 0;i < rows.length;i++){
               blogList.push(rows[i].title);
           }
-          var titleContent;
+          var titleContent = ``;
           for(i = 0;i < blogList.length;i++){
             titleContent += `<li onclick="getBlog(${i})"> ${blogList[i]} </li>`;
            }
