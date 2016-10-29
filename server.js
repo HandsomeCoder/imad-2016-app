@@ -116,20 +116,7 @@ app.get('/blog/q/db', function (req, res) {
 
 function createBlog(){
     var blogList = [];
-    getResult("SELECT title FROM blog",function(err,rows){
-      if(err){
-          
-      }else{
-          for(var i = 0;i < rows.length;i++){
-              blogList.push(rows[0].title);
-          }
-          
-      } 
-   });
-   return (blogList);
-//   sleep.sleep(2);
-   
-/*  
+
     var dis;
     var blogTemplate1 = `<!DOCTYPE html>
         <html>
@@ -159,13 +146,6 @@ function createBlog(){
                 <section id="container">
                     <section id="menuBar">`;
                     
-    var blogTemplate3=`<ol start="1">`;
-    
-    for(var i = 0;i < blogList.length;i++){
-        blogTemplate3 += `<li onclick="getBlog(${i})"> ${blogList[i]} </li> `;
-    }
-    blogTemplate3 += `</ol>`;
-    
     var blogTemplate2 = `</section>
                     <section id="displayReg">
                         <h1> &#8592; Select Blog on Left panel </h1>
@@ -173,9 +153,28 @@ function createBlog(){
                 </section>
                 <script src="ui/js/blog.js"></script>
             </body>
-        </html>
-        `;
-    return blogTemplate1+blogTemplate3+blogTemplate2;*/
+        </html>`;
+        
+   getResult("SELECT title FROM blog",function(err,rows){
+      if(err){
+          
+      }else{
+          for(var i = 0;i < rows.length;i++){
+              blogList.push(rows[0].title);
+          }
+          
+      } 
+   });
+   
+    var blogTemplate3=`<ol start="1">`;
+    
+    for(var i = 0;i < blogList.length;i++){
+        blogTemplate3 += `<li onclick="getBlog(${i})"> ${blogList[i]} </li> `;
+    }
+    blogTemplate3 += `</ol>`;
+   
+   
+    return blogTemplate1+blogTemplate3+blogTemplate2;
 }
 
 function createBlogContent(data){
