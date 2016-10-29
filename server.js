@@ -54,7 +54,7 @@ app.get('/ui/images/ME_2.jpg', function (req, res) {
 
 
 app.get('/blog', function (req, res) {
-  res.send(getBlogTitle());
+  res.send(createBlog());
 });
 
 app.get('/blog/:blogNum', function (req, res) {
@@ -71,8 +71,26 @@ app.get('/blog/:blogNum', function (req, res) {
   });
 });
 
-function getBlogTitle(){
-    var blogList;
+app.get('/blog/q/db', function (req, res) {
+    var blogList = [];
+    pool.query("SELECT title FROM blog", function (err, result) {
+        if (err) {
+            res.status(500).send(err.toString());
+        } else {
+            if (result.rows.length === 0) {
+                res.status(404).send('Blog not found');
+            } else {
+                for(var i = 0;i < result.rows.length;i++){
+                    blogList.push(result.rows[0].title);
+                }
+                res.send(blogList);
+            }
+        }
+    });
+});
+
+function createBlog(){
+    var blogList =[];
     
     pool.query("SELECT title FROM blog", function (err, result) {
         if (err) {
@@ -88,11 +106,6 @@ function getBlogTitle(){
         }
     });
   
-    return blogList;
-}
-
-function createBlog(blogList){
-/*
     var dis;
     var blogTemplate1 = `<!DOCTYPE html>
         <html>
@@ -151,8 +164,8 @@ function createBlogContent(data){
                   <hr>
                   <p class="margin">
                     ${content}
-                  </p>`;*/
-    return blogList;
+                  </p>`;
+    return blogTemp;
 }
 
 
