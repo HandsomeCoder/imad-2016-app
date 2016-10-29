@@ -100,7 +100,7 @@ function getResult(str,callback){
     });
 }
 
-app.get('/blog/q/db', function (req, res) {
+app.get('/blog/title', function (req, res) {
     var blogList = [];
    getResult("SELECT title FROM blog",function(err,rows){
       if(err){
@@ -109,7 +109,7 @@ app.get('/blog/q/db', function (req, res) {
           for(var i = 0;i < rows.length;i++){
               blogList.push(rows[0].title);
           }
-          res.send(blogList);
+          res.send(createTitleContent(blogList));
       } 
    });
 });
@@ -176,6 +176,13 @@ function createBlogContent(data){
     return blogTemp;
 }
 
+function createTitleContent(data){
+    var titleContent;
+    for(var i = 0;i < data.lenght;i++){
+        title += `<li onclick="getBlog(${i})> ${data[i]} </li>"`;
+    }
+    return titleContent;
+}
 
 
 
