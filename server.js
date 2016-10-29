@@ -122,7 +122,7 @@ function createBlog(){
         return rows;
       } 
    });
-   return (blogList);
+   return blogList;
 //   sleep.sleep(2);
    
 /*  
