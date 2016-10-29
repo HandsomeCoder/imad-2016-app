@@ -58,15 +58,14 @@ app.get('/blog', function (req, res) {
 });
 
 app.get('/blog/:blogNum', function (req, res) {
-  // SELECT * FROM article WHERE title = '\'; DELETE WHERE a = \'asdf'
-  pool.query("SELECT title,date,content FROM blog WHERE id = $1", [req.params.blogNum], function (err, result) {
+  pool.query("SELECT content FROM blog WHERE id = $1", [req.params.blogNum], function (err, result) {
     if (err) {
         res.status(500).send(err.toString());
     } else {
         if (result.rows.length === 0) {
             res.status(404).send('Article not found');
         } else {
-            res.send(result.rows[0]);
+            res.send(createBlogContent(result.rows[0]));
         }
     }
   });
@@ -119,8 +118,19 @@ function createBlog(){
     return blogTemplate1+blogTemplate3+blogTemplate2;
 }
 
-
-
+function createBlogContent(data){
+    var title = data.title;
+    var date = data.date;
+    var content = data.content;
+    
+    var blogTemp=`<h1> ${title} </h1>
+                  <p class="right-align margin" > ${date} </p>
+                  <hr>
+                  <p class="margin">
+                    ${content}
+                  </p>`;
+    return blogTemp;
+}
 
 
 
