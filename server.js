@@ -104,18 +104,18 @@ app.get('/blog/q/db', function (req, res) {
 
 function createBlog(){
     var blogList =[];
-    
+    var log = "out";
    executeQuery("SELECT title FROM blog",function(err,rows){
       if(err){
           
       }else{
           for(var i = 0;i < rows.length;i++){
-              console.log("In");
+              log += "In";
               blogList.push(rows[0].title);
           }
       } 
    });
-   return blogList;
+   return log;
 /*  
     var dis;
     var blogTemplate1 = `<!DOCTYPE html>
