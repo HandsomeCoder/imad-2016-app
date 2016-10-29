@@ -128,7 +128,8 @@ function createBlog(){
           
       } 
    });
-   return blogList;
+   log+="end";
+   return log;
 //   sleep.sleep(2);
    
 /*  
