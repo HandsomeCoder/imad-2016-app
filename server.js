@@ -116,6 +116,7 @@ function createBlog(){
           }
       } 
    });
+   sleep(2);
    return log;
 /*  
     var dis;
