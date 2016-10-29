@@ -70,7 +70,7 @@ app.get('/blog/:blogNum', function (req, res) {
     }
   });
 });
-/*
+
 app.get('/blog/q/db', function (req, res) {
     var blogList = [];
     pool.query("SELECT title FROM blog", function (err, result) {
@@ -88,7 +88,7 @@ app.get('/blog/q/db', function (req, res) {
         }
     });
 });
-*/
+
 function createBlog(){
     var blogList =[];
     
