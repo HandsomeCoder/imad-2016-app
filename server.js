@@ -109,7 +109,7 @@ function createBlog(){
       if(err){
           
       }else{
-          var blogList =[];
+          blogList =[];
           for(var i = 0;i < rows.length;i++){
               blogList.push(rows[0].title);
           }
