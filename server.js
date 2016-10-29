@@ -79,7 +79,7 @@ app.get('/blog/q/db', function (req, res) {
             if (result.rows.length === 0) {
                 res.status(404).send('Blog not found');
             } else {
-                res.send(result.rows.title);
+                res.send(result.rows[0].title);
             }
         }
     });
