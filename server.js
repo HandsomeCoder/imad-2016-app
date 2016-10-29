@@ -144,9 +144,16 @@ function createBlog(){
                 </a>
             </nav>
                 <section id="container">
-                    <section id="menuBar">`;
-                    
-    var blogTemplate2 = `</section>
+                    <section id="menuBar">
+                        <div class="operationalButton pointer" onclick="getTitles()">
+                            click to load Title
+                        </div>
+                        <div id="titleSection">
+                        <ol start="1">
+        
+                        </ol>    
+                        </div>
+                    </section>
                     <section id="displayReg">
                         <h1> &#8592; Select Blog on Left panel </h1>
                     </section>
