@@ -114,7 +114,8 @@ function createBlog(){
           }
       } 
    });
-  
+   return blogList
+/*  
     var dis;
     var blogTemplate1 = `<!DOCTYPE html>
         <html>
@@ -160,7 +161,7 @@ function createBlog(){
             </body>
         </html>
         `;
-    return blogTemplate1+blogTemplate3+blogTemplate2;
+    return blogTemplate1+blogTemplate3+blogTemplate2;*/
 }
 
 function createBlogContent(data){
