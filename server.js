@@ -73,7 +73,7 @@ app.get('/blog/:blogNum', function (req, res) {
 
 function createBlog(){
     var blogList =[];
-/*    
+    
     pool.query("SELECT title FROM blog", function (err, result) {
         if (err) {
             res.status(500).send(err.toString());
@@ -82,12 +82,12 @@ function createBlog(){
                 res.status(404).send('Blog not found');
             } else {
                 for(var i = 0;i < result.rows.length;i++){
-                    blogList.push(result.row[i]);
+                    blogList.push(result.rows[i]);
                 }
             }
         }
     });
-  */  
+  
     var dis;
     var blogTemplate1 = `<!DOCTYPE html>
         <html>
