@@ -71,20 +71,7 @@ app.get('/blog/:blogNum', function (req, res) {
   });
 });
 
-app.get('/blog/q/db', function (req, res) {
-    var blogList = [];
-    pool.query("SELECT title FROM blog", function (err, result) {
-        if (err) {
-            res.status(500).send(err.toString());
-        } else {
-            if (result.rows.length === 0) {
-                res.status(404).send('Blog not found');
-            } else {
-                res.send(result.rows);
-            }
-        }
-    });
-});
+
 
 
 function executeQuery(str,callback){
@@ -95,29 +82,38 @@ function executeQuery(str,callback){
             if (result.rows.length === 0) {
                 res.status(404).send('Query not found');
             } else {
-                callback(result.rows)
+                callback(null,result.rows);
             }
         }
-    })
+    });
 }
 
+app.get('/blog/q/db', function (req, res) {
+    var blogList = [];
+   executeQuery("SELECT title FROM blog",function(err,rows){
+      if(err){
+          
+      }else{
+          for(var i = 0;i < rows.length;i++){
+              blogList.push(rows[0].title);
+          }
+          res.send(blogList);
+      } 
+   });
+});
 
 function createBlog(){
     var blogList =[];
     
-    pool.query("SELECT title FROM blog", function (err, result) {
-        if (err) {
-            res.status(500).send(err.toString());
-        } else {
-            if (result.rows.length === 0) {
-                res.status(404).send('Blog not found');
-            } else {
-                for(var i = 0;i < result.rows.length;i++){
-                    blogList.push(result.rows[0].title);
-                }
-            }
-        }
-    });
+   executeQuery("SELECT title FROM blog",function(err,rows){
+      if(err){
+          
+      }else{
+          for(var i = 0;i < rows.length;i++){
+              blogList.push(rows[0].title);
+          }
+      } 
+   });
   
     var dis;
     var blogTemplate1 = `<!DOCTYPE html>
