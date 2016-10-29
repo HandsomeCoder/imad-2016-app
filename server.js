@@ -110,6 +110,7 @@ function createBlog(){
           
       }else{
           for(var i = 0;i < rows.length;i++){
+              console.log("In")
               blogList.push(rows[0].title);
           }
       } 
