@@ -109,10 +109,9 @@ app.get('/blog/q/db', function (req, res) {
           for(var i = 0;i < rows.length;i++){
               blogList.push(rows[0].title);
           }
-          
+          res.send(blogList);
       } 
    });
-   res.send(blogList);
 });
 
 function createBlog(){
