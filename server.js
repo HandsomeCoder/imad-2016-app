@@ -181,7 +181,7 @@ function createTitleContent(data){
     for(var i = 0;i < data.lenght;i++){
         titleContent += `<li onclick="getBlog(${i})> ${data[i]} </li>"`;
     }
-    return data;
+    return titleContent;
 }
 
 
