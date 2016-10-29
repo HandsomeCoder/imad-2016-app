@@ -78,7 +78,7 @@ app.get('/blog/:blogNum', function (req, res) {
 function executeQuery(str,callback){
     pool.query(str,function(err,result){
         if (err) {
-            res.status(500).send(err.toString());
+            callback(err,null);
         } else {
             if (result.rows.length === 0) {
                 res.status(404).send('Query not found');
@@ -89,9 +89,19 @@ function executeQuery(str,callback){
     });
 }
 
+function getResult(str,callback){
+    executeQuery(str,function(err,rows){
+        if(!err){
+            callback(null,rows);
+        }else{
+            callback(true,null);
+        }
+    });
+}
+
 app.get('/blog/q/db', function (req, res) {
     var blogList = [];
-   executeQuery("SELECT title FROM blog",function(err,rows){
+   getResult("SELECT title FROM blog",function(err,rows){
       if(err){
           
       }else{
@@ -106,7 +116,7 @@ app.get('/blog/q/db', function (req, res) {
 function createBlog(){
     var blogList =[];
     var log = "out";
-   executeQuery("SELECT title FROM blog",function(err,rows){
+   getResult("SELECT title FROM blog",function(err,rows){
       log+="func";
       if(err){
          log+="err"; 
