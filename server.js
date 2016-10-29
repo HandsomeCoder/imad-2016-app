@@ -84,18 +84,21 @@ function createBlog(){
                 <link href="ui/css/blog.css" rel="stylesheet"/>
             </head>
             <body>
-                <nav>
-                    <a href="/">
-                        <div class="operationalButton">
-                            &#8592; Back
-                        </div>
-                    </a>
-                    <a href="Blog Page">
-                        <div class="operationalButton" style="float: right;">
-                            Profile Page
-                        </div>
-                    </a>
-                </nav>
+            <nav>
+                <a href="index.html">
+                    <div id="backButton" class="operationalButton">
+                        &#8592; Back
+                    </div>
+                </a>
+                <div id="pageTitle">
+                    My Blog...!!!
+                </div>
+                <a href="#">
+                    <div id="pageButton"class="operationalButton">
+                        Profile Page
+                    </div>
+                </a>
+            </nav>
                 <section id="container">
                     <section id="menuBar">`;
                     
