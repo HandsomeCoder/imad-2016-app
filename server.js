@@ -151,7 +151,7 @@ function createBlog(){
     
     
     var blogList = [];
-    getResult("SELECT title FROM blog",function(err,rows){
+    getResult("SELECT title FROM blog;",function(err,rows){
         if(err){
         }else{
             for(i = 0;i < rows.length;i++){
