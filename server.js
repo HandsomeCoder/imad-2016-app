@@ -152,6 +152,10 @@ function createBlog(){
     
     var blogList = [];
     console.log("start");
+    var x = 10000;
+    while(x > 0){
+        x--;
+    }
     getResult("SELECT title FROM blog;",function(err,rows){
         if(err){
             console.log("error");
@@ -169,10 +173,7 @@ function createBlog(){
    });
    
     console.log("end");
-    var x = 10000;
-    while(x > 0){
-        x--;
-    }
+
     
     
     var blogTemplate2=`</ol>    
