@@ -153,6 +153,7 @@ function createBlog(){
     var blogList = [];
     getResult("SELECT title FROM blog;",function(err,rows){
         if(err){
+            console.log("error")
         }else{
             for(i = 0;i < rows.length;i++){
                 blogList.push(rows[i].title);
