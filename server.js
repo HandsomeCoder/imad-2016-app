@@ -179,7 +179,7 @@ function createBlogContent(data){
                     <h3> Comments : </h3>
                     <input type="text" id="name" placeholder="Enter your name"/>
                     <textarea id="comment" placeholder="Enter your Comment" rows="4"></textarea><br>
-                    <input type="submit" value="Comment" onclick="addComment"/>
+                    <input type="submit" value="Comment" onclick="addComment()"/>
                 </section>`;
     return blogTemp;
 }
