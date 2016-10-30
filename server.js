@@ -151,7 +151,6 @@ function createBlog(){
     
     
     var blogList = [];
-    var titleContent = ``;
     getResult("SELECT title FROM blog",function(err,rows){
         if(err){
         }else{
@@ -160,7 +159,7 @@ function createBlog(){
             }
     
             for(i = 0;i < blogList.length;i++){
-                titleContent += `<li onclick="getBlog(${i})"> ${blogList[i]} </li>`;
+                blogTemplate += `<li onclick="getBlog(${i})"> ${blogList[i]} </li>`;
             }
         } 
    });
@@ -181,7 +180,7 @@ function createBlog(){
             </body>
         </html>`;
         
-    return blogTemplate+titleContent+blogTemplate2;
+    return blogTemplate+blogTemplate2;
 }
 
 function createBlogContent(data){
