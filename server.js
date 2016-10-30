@@ -60,7 +60,7 @@ app.get('/blog', function (req, res) {
 });
 
 app.get('/blog/:blogNum', function (req, res) {
-  pool.query("SELECT title,date,content FROM blog WHERE id = $1", [req.params.blogNum], function (err, result) {
+  pool.query("SELECT * FROM blog WHERE id = $1", [req.params.blogNum], function (err, result) {
     if (err) {
         res.status(500).send(err.toString());
     } else {
@@ -163,11 +163,13 @@ function createBlog(){
 }
 
 function createBlogContent(data){
+    var id = data.id;
     var title = data.title;
     var date = data.date;
     var content = data.content;
     
-    var blogTemp=`<h1> ${title} </h1>
+    var blogTemp=`<h1 id="blog_id"> ${id}</h1>
+                  <h1> ${title} </h1>
                   <p class="right-align margin" > ${date.toDateString()} </p>
                   <hr>
                   <p class="margin">
