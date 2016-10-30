@@ -35,6 +35,4 @@ function addComment(){
     blogId = parseInt(blogId);
     var name = document.getElementById('name').value;
     var comment = document.getElementById('comment').value;
-    
-    alert(blogId+ name+comment);
 }
