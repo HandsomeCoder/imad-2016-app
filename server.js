@@ -125,7 +125,7 @@ function createBlog(){
                 <link href="ui/css/site.css" rel="stylesheet"/>
                 <link href="ui/css/blog.css" rel="stylesheet"/>
             </head>
-            <body>
+            <body onload="getTitle()">
             <nav>
                 <a href="/">
                     <div id="backButton" class="operationalButton">
@@ -147,36 +147,8 @@ function createBlog(){
                             click to load Title
                         </div>
                         <div id="titleSection">
-                        <ol id="blogTitle" start="1">`;
-    
-    
-    var blogList = [];
-    console.log("start1");
-    var x = 10000;
-    while(x > 0){
-        x--;
-    }
-    getResult("SELECT title FROM blog;",function(err,rows){
-        if(err){
-            console.log("error");
-        }else{
-            
-            console.log("else");
-            for(i = 0;i < rows.length;i++){
-                blogList.push(rows[i].title);
-            }
-    
-            for(i = 0;i < blogList.length;i++){
-                blogTemplate += `<li onclick="getBlog(${i})"> ${blogList[i]} </li>`;
-            }
-        } 
-   });
-   
-    console.log("end");
-
-    
-    
-    var blogTemplate2=`</ol>    
+                        <ol id="blogTitle" start="1">
+                        </ol>    
                         </div>
                     </section>
                     <section id="displayReg">
@@ -187,7 +159,7 @@ function createBlog(){
             </body>
         </html>`;
         
-    return blogTemplate+blogTemplate2;
+    return blogTemplate;
 }
 
 function createBlogContent(data){
