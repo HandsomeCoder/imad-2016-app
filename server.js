@@ -125,7 +125,7 @@ function createBlog(){
                 <link href="ui/css/site.css" rel="stylesheet"/>
                 <link href="ui/css/blog.css" rel="stylesheet"/>
             </head>
-            <body >
+            <body onload="getTitle()" >
             <nav>
                 <a href="/">
                     <div id="backButton" class="operationalButton">
