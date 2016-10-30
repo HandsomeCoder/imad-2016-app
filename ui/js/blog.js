@@ -31,7 +31,8 @@ function getTitle(){
 }
 
 function addComment(){
-    var blogId = document.getElementById('blogId').value;
+    var blogId = document.getElementById('blogId').innerHTML;
+    blogId = parseInt(blogId);
     var name = document.getElementById('name').value;
     var comment = document.getElementById('comment').value;
     
