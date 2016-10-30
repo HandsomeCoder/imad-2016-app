@@ -31,9 +31,9 @@ function getTitle(){
 }
 
 function addComment(){
-    var blog_id = document.getElemntById('blog_id').value;
-    var name = document.getElemntById('name').value;
-    var comment = document.getElemntById('comment').value;
+    var blog_id = document.getElementById('blog_id').value;
+    var name = document.getElementById('name').value;
+    var comment = document.getElementById('comment').value;
     
     alert(blog_id+ name+comment);
 }
