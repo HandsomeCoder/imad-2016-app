@@ -108,7 +108,7 @@ app.get('/blog/q/title', function (req, res) {
           }
           var titleContent = ``;
           for(i = 0;i < blogList.length;i++){
-            titleContent += `<li onclick="getBlog(${i})"> ${blogList[i]} </li>`;
+            titleContent += `<li onclick="getBlog(${i+1})"> ${blogList[i]} </li>`;
            }
           res.send(titleContent);
       } 
