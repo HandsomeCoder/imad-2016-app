@@ -144,7 +144,7 @@ function createBlog(){
                 <section id="container">
                     <section id="menuBar">
                         <div class="operationalButton pointer" onclick="getTitle()">
-                            click to load Title
+                            Click to Refresh Title
                         </div>
                         <div id="titleSection">
                         <ol id="blogTitle" start="1">
