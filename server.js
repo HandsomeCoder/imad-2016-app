@@ -151,7 +151,7 @@ function createBlog(){
     
     
     var blogList = [];
-    console.log("start");
+    console.log("start1");
     var x = 10000;
     while(x > 0){
         x--;
