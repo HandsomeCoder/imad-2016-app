@@ -69,9 +69,14 @@ hr{
 
 .pointer{
     cursor: pointer;
-    margin: 5px 20%;
 }
 
+marginRef{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 60px;
+    
+}
 .text-indent{
     text-indent: 10px; 
 }
