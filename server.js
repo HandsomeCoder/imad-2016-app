@@ -73,9 +73,6 @@ app.get('/blog/:blogNum', function (req, res) {
   });
 });
 
-
-
-
 function executeQuery(str,callback){
     pool.query(str,function(err,result){
         if (err) {
@@ -150,9 +147,27 @@ function createBlog(){
                             click to load Title
                         </div>
                         <div id="titleSection">
-                        <ol id="blogTitle" start="1">
-        
-                        </ol>    
+                        <ol id="blogTitle" start="1">`;
+    
+    
+    var blogList = [];
+    getResult("SELECT title FROM blog",function(err,rows){
+        if(err){
+        }else{
+            for(i = 0;i < rows.length;i++){
+                blogList.push(rows[i].title);
+            }
+            var titleContent = ``;
+            for(i = 0;i < blogList.length;i++){
+                titleContent += `<li onclick="getBlog(${i})"> ${blogList[i]} </li>`;
+            }
+        } 
+   });
+    
+    
+    
+    
+    var blogTemplate2=`</ol>    
                         </div>
                     </section>
                     <section id="displayReg">
@@ -163,7 +178,7 @@ function createBlog(){
             </body>
         </html>`;
         
-    return blogTemplate;
+    return blogTemplate+titleContent+blogTempalat2;
 }
 
 function createBlogContent(data){
