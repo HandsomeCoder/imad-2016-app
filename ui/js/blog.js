@@ -30,10 +30,10 @@ function getTitle(){
     request.send(null);
 }
 
-submit.onclick = function(){
+function addComment(){
     var blog_id = document.getElemntById('blog_id').value;
     var name = document.getElemntById('name').value;
     var comment = document.getElemntById('comment').value;
     
     alert(blog_id+ name+comment);
-};
+}
