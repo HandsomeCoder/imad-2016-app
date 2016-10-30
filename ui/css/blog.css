@@ -70,5 +70,7 @@ hr{
 
 .pointer{
     cursor: pointer;
-    margin: 5px 15%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 50px;
 }
