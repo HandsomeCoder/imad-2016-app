@@ -164,7 +164,7 @@ function createBlog(){
             }
         } 
    });
-    var x = 100;
+    var x = 10000;
     while(x > 0){
         x--;
     }
