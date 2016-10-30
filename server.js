@@ -143,7 +143,7 @@ function createBlog(){
             </nav>
                 <section id="container">
                     <section id="menuBar">
-                        <div class="operationalButton pointer" onclick="getTitle()">
+                        <div class="operationalButton pointer marginRef" onclick="getTitle()">
                             Refresh Blog Title
                         </div>
                         <div id="titleSection">
