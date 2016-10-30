@@ -172,7 +172,13 @@ function createBlogContent(data){
                   <hr>
                   <p class="margin">
                     ${content}
-                  </p>`;
+                  </p>
+                  <section class="margin">
+                    <h3> Comments : </h3>
+                    <input type="text" name="name" placeholder="Enter your name"/>
+                    <textarea placeholder="Enter your Comment" rows="4"></textarea><br>
+                    <input type="submit" value="Comment"/>
+                </section>`;
     return blogTemp;
 }
 
