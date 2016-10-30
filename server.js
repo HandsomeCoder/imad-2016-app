@@ -179,7 +179,7 @@ function createBlog(){
             </body>
         </html>`;
         
-    return blogTemplate+titleContent+blogTempalat2;
+    return blogTemplate+titleContent+blogTemplate2;
 }
 
 function createBlogContent(data){
