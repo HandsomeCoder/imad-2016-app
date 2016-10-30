@@ -151,13 +151,14 @@ function createBlog(){
     
     
     var blogList = [];
+    var titleContent = ``;
     getResult("SELECT title FROM blog",function(err,rows){
         if(err){
         }else{
             for(i = 0;i < rows.length;i++){
                 blogList.push(rows[i].title);
             }
-            var titleContent = ``;
+
             for(i = 0;i < blogList.length;i++){
                 titleContent += `<li onclick="getBlog(${i})"> ${blogList[i]} </li>`;
             }
