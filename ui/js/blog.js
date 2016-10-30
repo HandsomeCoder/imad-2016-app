@@ -29,3 +29,11 @@ function getTitle(){
     request.open('GET', 'http://handsomecoder.imad.hasura-app.io/blog/q/title', true);
     request.send(null);
 }
+
+submit.onclick = function(){
+    var blog_id = document.getElemntById('blog_id').value;
+    var name = document.getElemntById('name').value;
+    var comment = document.getElemntById('comment').value;
+    
+    alert(blog_id+ name+comment);
+};
