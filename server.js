@@ -65,7 +65,7 @@ app.get('/blog/:blogNum', function (req, res) {
         res.status(500).send(err.toString());
     } else {
         if (result.rows.length === 0) {
-            res.status(404).send('Article not found');
+            res.status(404).send('Blog not found');
         } else {
             res.send(createBlogContent(result.rows[0]));
         }
@@ -114,6 +114,21 @@ app.get('/blog/q/title', function (req, res) {
       } 
    });
 });
+
+app.get('/blog/q/comment', function (req, res) {
+    var blogId = req.query.blogId;
+    var name = req.query.name;
+    var comment = req.query.comment;
+    getResult('INSERT INTO "commentRecord" ("blogId", "name", "comment") VALUES ($1,$2,$3)',[blogId],[name],[comment],function(err,row){
+        if(err){
+            console.log("fail");
+        }
+        else{
+            console.log("success");
+        }
+    });
+});
+
 
 function createBlog(){
     var blogTemplate = `<!DOCTYPE html>
