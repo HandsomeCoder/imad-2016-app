@@ -46,6 +46,6 @@ function addComment(){
     };
     
     
-    request.open('GET', 'http://handsomecoder.imad.hasura-app.io/blog/q/comment?blogId='+blodId+'&name='+name+'&comment='+comment, true);
+    request.open('GET', 'http://handsomecoder.imad.hasura-app.io/blog/q/comment?blogId='+blogId+'&name='+name+'&comment='+comment, true);
     request.send(null);
 }
