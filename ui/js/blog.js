@@ -35,4 +35,6 @@ function addComment(){
     blogId = parseInt(blogId);
     var name = document.getElementById('name').value;
     var comment = document.getElementById('comment').value;
+    request.open('GET', 'http://handsomecoder.imad.hasura-app.io/blog/q/comment?blogId='+blodId+'&name='+name+'&comment='+comment, true);
+    request.send(null);
 }
