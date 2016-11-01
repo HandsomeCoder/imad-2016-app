@@ -38,7 +38,7 @@ app.get('/ui/css/blog.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/css', 'blog.css'));
 });
 
-app.get('/ui/html/profile.html', function (req, res) {
+app.get('/ui/html/profile', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/html', 'profile.html'));
 });
 
