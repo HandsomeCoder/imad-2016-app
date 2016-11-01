@@ -42,6 +42,8 @@ function addComment(){
       if (request.readyState === XMLHttpRequest.DONE) {
           if (request.status === 200) {
                 loadComment(blogId);
+                document.getElementById('name').innerHTML = "";
+                document.getElementById('comment').innerHTML = "";
           }
       }  
     };
