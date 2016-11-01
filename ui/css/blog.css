@@ -42,8 +42,8 @@ li{
 }
 
 li:hover{
-    color: #ffffff;
-    border: 1px #ffffff solid;
+    color: #3081a6;
+    border: 1px ##3081a6 solid;
     border-radius: 4px;
     cursor: pointer;
 }
