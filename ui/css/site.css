@@ -21,6 +21,25 @@ body {
     border-color: #3081a6;
 }
 
+nav{
+    display: flex;
+}
+
+#pageTitle{
+    flex-grow: 3;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#backButton{
+    flex-grow: 1;
+}
+
+#pageButton{
+    flex-grow: 1;
+}
+
 input[type=text],textarea{
     padding: 5px;
     font-family: sans-serif;
