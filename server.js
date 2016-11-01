@@ -132,22 +132,7 @@ app.get('/blog/q/comment', function (req, res) {
 
 app.get('/blog/q/fetchComment', function (req, res) {
     var blogId = req.query.blogId;
-    var commentContent = `Hi`; 
-    getResult('SELECT name,comment FROM "commentRecord" WHERE blogId='+blogId,function(err,rows){
-        if(err){
-            
-        }
-        else{
-            for(var i = 0;i < rows.length;i++){
-                commentContent += `<span class="bold"> ${rows[i].name}:</span>
-                                   <br>
-                                   <span> ${rows[i].comment} </span>
-                                   <br>`;
-            }
-            res.send(commentContent);
-        }
-
-    });
+    res.send(fetchComments(blogId))
 });
 
 
@@ -229,8 +214,23 @@ function createBlogContent(data){
     return blogTemp;
 }
 
-function fetchComments(BlogId){
+function fetchComments(blogId){
+    var commentContent = ``; 
+    getResult('SELECT name,comment FROM "commentRecord" WHERE blogId='+blogId,function(err,rows){
+        if(err){
+            
+        }
+        else{
+            for(var i = 0;i < rows.length;i++){
+                commentContent += `<span class="bold"> ${rows[i].name}:</span>
+                                   <br>
+                                   <span> ${rows[i].comment} </span>
+                                   <br>`;
+            }
+            return(commentContent);
+        }
 
+    });
 
 }
 
