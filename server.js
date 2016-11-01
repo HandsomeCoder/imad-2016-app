@@ -78,11 +78,7 @@ function executeQuery(str,callback){
         if (err) {
             callback(err,null);
         } else {
-            if (result.rows.length === 0) {
-                res.status(404).send('Query not found');
-            } else {
                 callback(null,result.rows);
-            }
         }
     });
 }
