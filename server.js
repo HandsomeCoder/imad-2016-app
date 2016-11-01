@@ -214,11 +214,7 @@ function createBlogContent(data){
                   <section class="margin">
                     <h3> Comments : </h3>
                     <div id="postedComment">
-                        <p >
-                            <span id="cname" class="bold"></span>
-                            <br>
-                            <span id="ctext"></span>
-                        </p>
+
                     </div>
                     <div>
                         <input type="text" id="name" placeholder="Enter your name"/>
