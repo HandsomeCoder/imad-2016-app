@@ -131,7 +131,7 @@ app.get('/blog/q/comment', function (req, res) {
 });
 
 app.get('/blog/q/fetchComment', function (req, res) {
-    var blodId = req.query.blogId;
+    var blogId = req.query.blogId;
     res.send(fetchComments(blogId));
 });
 
