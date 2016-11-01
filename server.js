@@ -132,7 +132,22 @@ app.get('/blog/q/comment', function (req, res) {
 
 app.get('/blog/q/fetchComment', function (req, res) {
     var blogId = req.query.blogId;
-    res.send(fetchComments(blogId));
+    var commentContent = ``; 
+    getResult('SELECT name,comment FROM "commentRecord" WHERE blogId='+blogId,function(err,rows){
+        if(err){
+            
+        }
+        else{
+            for(var i = 0;i < rows.length;i++){
+                commentContent += `<span class="bold"> ${rows[i].name}:</span>
+                                   <br>
+                                   <span> ${rows[i].comment} </span>
+                                   <br>`;
+            }
+            res.send(commentContent);
+        }
+    });
+
 });
 
 
@@ -215,21 +230,7 @@ function createBlogContent(data){
 }
 
 function fetchComments(blogId){
-    var commentContent = ``; 
-    getResult('SELECT name,comment FROM "commentRecord" WHERE blogId='+blogId,function(err,rows){
-        if(err){
-            
-        }
-        else{
-            for(var i = 0;i < rows.length;i++){
-                commentContent += `<span class="bold"> ${rows[i].name}:</span>
-                                   <br>
-                                   <span> ${rows[i].comment} </span>
-                                   <br>`;
-            }
-        }
-    });
-   return(commentContent);
+
 }
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
