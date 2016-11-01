@@ -7,7 +7,6 @@ nav{
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-
 }
 
 #backButton{
@@ -77,7 +76,9 @@ hr{
     text-indent: 10px; 
 }
 
-
+.center{
+    text-align:center;
+}
 
 .bold{
     font-weight: bold;
