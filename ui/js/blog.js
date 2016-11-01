@@ -62,6 +62,6 @@ function loadComment(blogId){
       }  
     };
     
-    request.open('GET', 'http://handsomecoder.imad.hasura-app.io/blog/q/fetchComment?blogId'+blogId, true);
+    request.open('GET', 'http://handsomecoder.imad.hasura-app.io/blog/q/fetchComment?blogId='+blogId, true);
     request.send(null);
 }
