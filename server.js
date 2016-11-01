@@ -138,7 +138,7 @@ app.get('/blog/q/fetchComment', function (req, res) {
             
         }
         else{
-            for(var i = 0;i < rows.lenght;i++){
+            for(var i = 0;i < rows.length;i++){
                 commentContent += `<span class="bold"> ${rows[i].name}:</span>
                                    <br>
                                    <span> ${rows[i].comment} </span>
