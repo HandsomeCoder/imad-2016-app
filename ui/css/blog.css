@@ -112,3 +112,8 @@ input[type=submit]:hover{
     border:2px solid #ffffff;
     color: #ffffff;
 }
+
+
+.bold{
+    font-weight: bold;
+}
