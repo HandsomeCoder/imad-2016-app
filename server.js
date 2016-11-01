@@ -132,7 +132,7 @@ app.get('/blog/q/comment', function (req, res) {
 
 app.get('/blog/q/fetchComment', function (req, res) {
     var blogId = req.query.blogId;
-    res.send(fetchComments(blogId))
+    res.send(fetchComments(blogId));
 });
 
 
@@ -227,11 +227,9 @@ function fetchComments(blogId){
                                    <span> ${rows[i].comment} </span>
                                    <br>`;
             }
-            return(commentContent);
         }
-
     });
-
+   return(commentContent);
 }
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
