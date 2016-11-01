@@ -121,7 +121,7 @@ app.get('/blog/q/comment', function (req, res) {
             console.log("fail");
         }
         else{
-            res.send("sucess");
+            res.send("success");
         }
     });
 });
