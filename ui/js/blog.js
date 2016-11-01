@@ -6,7 +6,8 @@ function getBlog(x){
           // Take some action
           if (request.status === 200) {
                 var blogContent = request.responseText;
-                document.getElementById('displayReg').innerHTML = blogContent.toString();   
+                document.getElementById('displayReg').innerHTML = blogContent.toString();
+                loadComment(x);
           }
       }  
     };
@@ -56,7 +57,7 @@ function loadComment(blogId){
     if (request.readyState === XMLHttpRequest.DONE) {
           if (request.status === 200) {
                 var commentContent = request.responseText;
-                document.getElementById('').innerHTML = blogTitle.toString();   
+                document.getElementById('postedComment').innerHTML = commentContent.toString();   
           }
       }  
     };
