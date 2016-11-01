@@ -207,7 +207,7 @@ function createBlogContent(data){
                   <p class="margin">
                     ${content}
                   </p>
-                  <section class="margin">
+                  <section id="commentSection" class="margin">
                     <h3> Comments : </h3>
                     <div id="postedComment">
 
