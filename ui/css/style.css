@@ -22,13 +22,14 @@ body {
 .imgContainer{
     margin-left: 36%;
     display: inline-block;
-    border: 3px #ffffff solid;
-    border-radius: 50%;
+
 }
 
 .img-medium {
     height: 300px;
     border-radius: 50%;
+    border: 3px #ffffff solid;
+
 }
 
 
