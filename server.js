@@ -142,7 +142,7 @@ app.get('/blog/q/fetchComment', function (req, res) {
                 commentContent += `<span class="bold"> ${rows[i].name}:</span>
                                    <br>
                                    <span> ${rows[i].comment} </span>
-                                   <br>`;
+                                   <br><br>`;
             }
             res.send(commentContent);
         }
