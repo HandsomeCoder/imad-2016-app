@@ -83,3 +83,12 @@ hr{
 .bold{
     font-weight: bold;
 }
+
+.float-right{
+    float: right;
+}
+
+#commentSection{
+    max-width: 515px;
+    border: 1px #000000 solid;
+}
