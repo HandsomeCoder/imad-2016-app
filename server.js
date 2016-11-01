@@ -175,7 +175,7 @@ function createBlog(){
             </nav>
                 <section id="container">
                     <section id="menuBar">
-                        <div>
+                        <div class="center">
                             Blog Titles
                         </div>
                         <div id="titleSection">
