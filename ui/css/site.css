@@ -9,8 +9,8 @@ body {
 
 .operationalButton{
     display: inline-block;
-    border:3px #000000 solid;
-    border-radius: 3px;
+    border:2px #000000 solid;
+    border-radius: 5px;
     padding: 10px;
     font-weight: bold;
     color: #000000;
