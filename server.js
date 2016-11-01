@@ -193,9 +193,19 @@ function createBlogContent(data){
                   </p>
                   <section class="margin">
                     <h3> Comments : </h3>
-                    <input type="text" id="name" placeholder="Enter your name"/>
-                    <textarea id="comment" placeholder="Enter your Comment" rows="4"></textarea><br>
-                    <input type="submit" value="Comment" onclick="addComment()"/>
+                    <div id="postedComment">
+                        <p >
+                            <span id="cname" class="bold"></span>
+                            <br>
+                            <span id="ctext"></span>
+                        </p>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="text" id="name" placeholder="Enter your name"/>
+                        <textarea id="comment" placeholder="Enter your Comment" rows="4"></textarea><br>
+                        <input type="submit" value="Add Comment" onclick="addComment()"/>
+                    </div>
                 </section>`;
     return blogTemp;
 }
