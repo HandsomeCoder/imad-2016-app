@@ -198,11 +198,11 @@ function createBlogContent(data){
     var id = data.id;
     
     var title = data.title;
-    var date = data.date;
+    var date = data.date.toDateString();
     var content = data.content;
     
     var blogTemp=`<h1><span id="blogId">${id}</span>. ${title} </h1>
-                  <p class="right-align margin" > ${date.toDateString()} </p>
+                  <p class="right-align margin" > ${date} </p>
                   <hr>
                   <p class="margin">
                     ${content}
