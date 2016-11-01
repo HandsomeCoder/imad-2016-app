@@ -133,7 +133,7 @@ app.get('/blog/q/comment', function (req, res) {
 app.get('/blog/q/fetchComment', function (req, res) {
     var blogId = req.query.blogId;
     var commentContent = ``; 
-    getResult("SELECT name,comment FROM commentRecord WHERE blogId = "+blogId,function(err,rows){
+    getResult("SELECT name,comment FROM commentRecord WHERE blogId="+blogId,function(err,rows){
         if(err){
             
         }
