@@ -215,21 +215,21 @@ function createBlogContent(data){
 }
 
 function fetchComments(BlogId){
+    var commentContent = ``; 
     getResult("SELECT name,comment FROM commentRecord WHERE blogId = "+BlogId,function(err,rows){
         if(err){
             
         }
         else{
-            var commentContent = ``;     
             for(var i = 0;i < rows.lenght;i++){
                 commentContent += `<span class="bold"> ${rows[i].name}:</span>
                                    <br>
                                    <span> ${rows[i].comment} </span>
                                    <br>`;
             }
-            res.send(commentContent);
         }
     });
+    return commentContent;
 }
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
