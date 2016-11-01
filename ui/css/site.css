@@ -19,6 +19,7 @@ body {
     color: #ffffff;
     border-color: #ffffff;
 }
+
 input[type=text],textarea{
     padding: 5px;
     font-family: sans-serif;
