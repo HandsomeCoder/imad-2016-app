@@ -202,7 +202,7 @@ function createBlogContent(data){
     var content = data.content;
     
     var blogTemp=`<h1><span id="blogId">${id}</span>. ${title} </h1>
-                  <p class="right-align margin" > ${date.toDateString()} </p>
+                  <p class="right-align margin" > ${date.prototype.getDay().toDateString()} </p>
                   <hr>
                   <p class="margin">
                     ${content}
@@ -221,9 +221,6 @@ function createBlogContent(data){
     return blogTemp;
 }
 
-function fetchComments(blogId){
-
-}
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
