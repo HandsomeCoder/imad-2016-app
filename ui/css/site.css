@@ -52,3 +52,11 @@ input[type=submit]:hover{
     border:2px solid #3081a6;
     color: #3081a6;
 }
+
+.float-right{
+    float: right;
+}
+
+#commentSection{
+    max-width: 515px;
+}
