@@ -17,8 +17,8 @@ body {
 }
 
 .operationalButton:hover{
-    color: #ffffff;
-    border-color: #ffffff;
+    color: #3081a6;
+    border-color: #3081a6;
 }
 
 input[type=text],textarea{
