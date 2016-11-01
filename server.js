@@ -227,8 +227,9 @@ function fetchComments(BlogId){
                                    <span> ${rows[i].comment} </span>
                                    <br>`;
             }
+            return commentContent;
         }
-        return commentContent;
+
     });
 
 }
