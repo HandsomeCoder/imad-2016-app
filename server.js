@@ -122,7 +122,7 @@ app.get('/blog/q/comment', function (req, res) {
     console.log(blogId);
     pool.query('INSERT INTO "commentRecord" ("blogId", "name", "comment") VALUES ($1,$2,$3)',[blogId,name,comment],function(err,res){
         if(err){
-            console.log("fail")
+            console.log("fail");
         }
         else{
             console.log("sucess");
