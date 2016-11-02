@@ -131,7 +131,6 @@ app.get('/blog/q/comment', function (req, res) {
 });
 
 app.get('/profile/comment', function (req, res) {
-    var blogId = req.query.blogId;
     var name = req.query.name;
     var comment = req.query.comment;
     console.log(blogId);
