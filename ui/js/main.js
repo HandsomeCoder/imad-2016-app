@@ -29,7 +29,7 @@ function addComment(x){
               }
           }  
         };
-        request.open('GET', 'http://handsomecoder.imad.hasura-app.io/profile/comment?name'+name+'&comment='+comment, true);
+        request.open('GET', 'http://handsomecoder.imad.hasura-app.io/profile/comment?name='+name+'&comment='+comment, true);
         request.send(null);
     
     }
