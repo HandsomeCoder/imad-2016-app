@@ -171,7 +171,7 @@ function createBlog(){
                 <div id="pageTitle">
                     My Blog
                 </div>
-                <a href="ui/html/profile">
+                <a href="profile">
                     <div id="pageButton"class="operationalButton">
                         Profile Page
                     </div>
