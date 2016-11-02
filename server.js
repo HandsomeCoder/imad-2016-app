@@ -135,7 +135,7 @@ app.get('/profile/comment', function (req, res) {
     var name = req.query.name;
     var comment = req.query.comment;
     console.log(blogId);
-    pool.query('INSERT INTO "commentRecord" ("blogid", "name", "comment") VALUES ($1,$2,$3)',[blogId,name,comment],function(err,rows){
+    pool.query('INSERT INTO "profileComment" ("name", "comment") VALUES ($1,$2)',[name,comment],function(err,rows){
         if(err){
             console.log("fail");
         }
