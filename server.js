@@ -188,6 +188,7 @@ function createBlog(){
                     </section>
                 </section>
                 <script src="ui/js/blog.js"></script>
+                <script src="ui/js/main.js"></script>
             </body>
         </html>`;
         
