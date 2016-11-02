@@ -165,6 +165,24 @@ app.get('/blog/q/fetchComment', function (req, res) {
 
 });
 
+app.get('/profile/fetchComment', function (req, res) {
+    var commentContent = ``; 
+    getResult('SELECT name,comment FROM "profileComment"',function(err,rows){
+        if(err){
+            
+        }
+        else{
+            for(var i = 0;i < rows.length;i++){
+                commentContent += `<span class="bold"> ${rows[i].name}:</span>
+                                   <br>
+                                   <span> ${rows[i].comment} </span>
+                                   <br><br>`;
+            }
+            res.send(commentContent);
+        }
+    });
+
+});
 
 function createBlog(){
     var blogTemplate = `<!DOCTYPE html>
