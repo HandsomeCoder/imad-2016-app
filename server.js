@@ -46,6 +46,10 @@ app.get('/ui/js/blog.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/js', 'blog.js'));
 });
 
+app.get('/ui/js/blog.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/js', 'main.js'));
+});
+
 app.get('/ui/images/ME_0.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/images', 'ME_0.jpg'));
 });
