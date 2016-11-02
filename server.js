@@ -130,6 +130,21 @@ app.get('/blog/q/comment', function (req, res) {
     });
 });
 
+app.get('/profile/comment', function (req, res) {
+    var blogId = req.query.blogId;
+    var name = req.query.name;
+    var comment = req.query.comment;
+    console.log(blogId);
+    pool.query('INSERT INTO "commentRecord" ("blogid", "name", "comment") VALUES ($1,$2,$3)',[blogId,name,comment],function(err,rows){
+        if(err){
+            console.log("fail");
+        }
+        else{
+            res.send(`success`);
+        }
+    });
+});
+
 app.get('/blog/q/fetchComment', function (req, res) {
     var blogId = req.query.blogId;
     var commentContent = ``; 
