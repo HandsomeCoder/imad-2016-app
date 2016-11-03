@@ -36,7 +36,7 @@ function addComment(x){
             request.onreadystatechange = function () {
               if (request.readyState === XMLHttpRequest.DONE) {
                   if (request.status === 200) {
-                        loadComment(blogId,null);
+                        loadComment(blogId,false);
                         document.getElementById('name').value = "";
                         document.getElementById('comment').value = "";
                   }
