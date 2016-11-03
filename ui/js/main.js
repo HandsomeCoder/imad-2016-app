@@ -1,3 +1,15 @@
+function check(){
+    var name = document.getElementById('name');
+    var comment = document.getElementById('comment');
+    if(name.value === ""){
+        name.getElementById('name').classList.add("invalid");
+    }
+    if(comment.value === ""){
+        comment.classList.add = "invalid";
+    }
+}
+
+
 function addComment(x){
     var request = new XMLHttpRequest();
     var name = document.getElementById('name').value;
