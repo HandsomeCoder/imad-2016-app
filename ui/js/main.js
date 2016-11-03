@@ -1,24 +1,28 @@
-function check(){
+function validate(){
     var name = document.getElementById('name');
     var comment = document.getElementById('comment');
+    var check = true;
     if(name.value === ""){
         name.classList.add("invalid");
-        return false;
+        check = false;
     }
     if(comment.value === ""){
         comment.classList.add("invalid");
-        return false;
+        check = false;
     }
-    else{
+    if(check){
         name.classList.remove("invalid");
         comment.classList.remove("invalid");
         return true;
+    }
+    else{
+        return false;
     }
 }
 
 
 function addComment(x){
-    if(check()){
+    if(validate()){
         var request = new XMLHttpRequest();
         var name = document.getElementById('name').value;
         var comment = document.getElementById('comment').value;
