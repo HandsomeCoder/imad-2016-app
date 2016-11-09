@@ -1,47 +1,119 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Sign In Page</title>
-  <link rel="stylesheet" href="sign.css">
-</head>
-<body>
-    <table >
-      <thead>
-        <tr>
-          <th colspan="2">Sign In</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td> 
-            <label for="uname">Username :</label> 
-          </td>
-          <td> 
-            <input type="text" id="uname" name="uname" placeholder="14IT120"> 
-          </td>
-        </tr>
-        <tr>
-          <td> 
-            <label for="password">Password :</label> 
-          </td>
-          <td> 
-               <input type="password" id="password" name="password" placeholder="password">
-          </td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td> 
-            <input type="reset"> 
-          </td>
-          <td>
-            <input type="submit" id="submit" value="Sign In"> 
-          </td>
-        </tr>
-      </tfoot>
-    </table>
-      <script type="text/javascript" src="ui/js/signin.js"></script>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Sign Page</title>
+        <link rel="stylesheet" href="site.css"/>
+        <link rel="stylesheet" href="sign.css"/>
+
+    </head>
+    <body>
+
+        <section id="signup">
+            <center>
+                <table cellpadding="5">
+                    <thead>
+                        <tr>
+                            <th colspan="2"> Sign Up Form </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label for="email"> Firstname: </label>
+                            </td>
+                            <td>
+                                <input type="text" id="uname" name="uname" placeholder="Harsh">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="fname"> Lastname: </label>
+                            </td>
+                            <td>
+                                <input type="text" id="lname" name="lname" placeholder="Shah">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email"> Email ID: </label>
+                            </td>
+                            <td>
+                                <input type="email" id="email" name="email" placeholder="harshshah1295@gmail.com">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="password"> Password : </label>
+                            </td>
+                            <td>
+                                <input type="password" id="password" name="password" placeholder="password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="Cpassword"> Confirm Password : </label>
+                            </td>
+                            <td>
+                                <input type="password" id="password" name="cpassword" placeholder="confirm password">
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+
+                            </td>
+                            <td>
+                                <input type="submit" id="submit">
+                                <input type="reset">
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </center>
+        </section>
+        <section id="signin">
+            <center>
+                <table cellpadding="5" >
+                    <thead>
+                        <tr>
+                            <th colspan="2">Sign In</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> 
+                                <label for="email">Email ID :</label> 
+                            </td>
+                            <td> 
+                                <input type="text" id="email" name="email" placeholder="harshshah1295@gmail.com"> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <label for="password">Password :</label> 
+                            </td>
+                            <td> 
+                                <input type="password" id="password" name="password" placeholder="password">
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td> 
+
+                            </td>
+                            <td>
+                                <input type="submit" id="submit" value="Log In"> 
+                                <input type="reset" value="Reset"> 
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </center>
+        </section>
+        <script type="text/javascript" src="ui/js/signup.js"></script>
+    </body>
 </html>
