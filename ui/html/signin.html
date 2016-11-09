@@ -1,1 +1,49 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sign In Page</title>
+  <link rel="stylesheet" href="sign.css">
+  <link rel="stylesheet" href="ui/css/site.css">
+</head>
+<body>
+  <form name="signInForm" id="signInForm" action="../signInServlet" method="get">
+    <table >
+      <thead>
+        <tr>
+          <th colspan="2">Sign In</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> 
+            <label for="En_rol">Email ID :</label> 
+          </td>
+          <td> 
+            <input type="text" name="email" placeholder="14IT120"> 
+          </td>
+        </tr>
+        <tr>
+          <td> 
+            <label for="password">Password :</label> 
+          </td>
+          <td> 
+               <input type="password" name="password" placeholder="password">
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td> 
+            <input type="reset"> 
+          </td>
+          <td> 
+            <input type="submit" value="Sign In"> 
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </form>
+</body>
+</html>
