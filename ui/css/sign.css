@@ -1,68 +1,26 @@
-body {
-    font-family: verdana;
-    background-color: #e4f1f7;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-    line-height: 1.5rem;
+body{
+    display: flex;
 }
 
 section{
-  font-family: calibri,Serif ;
-
-}
-form{
-  margin-top: 20px;
-  margin-left:19%;
+    margin-top: 90px;
+    width: 50%;
 }
 
-td{
-  padding: 10px;
+#signup{
+    border-right: 1px #000000 solid;
 }
 
-thead{
-  font-size: 50px;
+#signin{
+    border-left: 1px #000000 solid;
 }
 
-th{
-  padding-bottom: 30px;
-}
-tbody{
-  font-size: 20px;
-
+table td:first-child{
+    text-align: right;
 }
 
-label{
-    font-weight: bold;
+input[type=reset]{
+    margin-left: 2px;
+    border: transparent;
 }
 
-input,select{
-  font-size: 20px;
-  padding:5px; 
-  border:2px #000000 solid; 
-  border-radius: 5px;
-  background-color: transparent;
-}
-
-input:focus,select:focus{
-    border-color: #ffffff;
-}
-
-::-webkit-input-placeholder{
-  color: #59606b;
-}
-input[type=submit],input[type=reset]{
-    padding:5px 15px; 
-    border:2px solid #000000;
-    cursor:pointer;
-    border-radius: 5px;
-}
-
-input[type=submit]:focus,input[type=reset]:focus{
-    border-color: #ffffff;
-}
-
-input[type=submit]:hover,input[type=reset]:hover{
-    border:2px #3081a6 solid;
-    color: #3081a6;
-}
