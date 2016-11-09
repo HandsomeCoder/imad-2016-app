@@ -53,17 +53,10 @@ app.get('/ui/css/blog.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/css', 'blog.css'));
 });
 
-app.get('/signup', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui/html', 'signup.html'));
+app.get('/sign', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/html', 'sign.html'));
 });
 
-app.get('/signin', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui/html', 'signin.html'));
-});
-
-app.get('/home', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui/html', 'home.html'));
-});
 
 app.get('/profile', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/html', 'profile.html'));
