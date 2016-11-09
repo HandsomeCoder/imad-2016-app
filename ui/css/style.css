@@ -4,6 +4,10 @@ body {
     margin-top: 75px;
 }
 
+#container{
+    display: flex;
+}
+
 .margin-left{
     margin-left: 50px;
 }
@@ -19,8 +23,28 @@ body {
     font-weight: bold;
 }
 
+.navmargin{
+    margin-left: 75%;
+}
+
+#title{
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+#banner{
+       flex-grow: 3; 
+}
+
+.sigin{
+        flex-grow: 1;
+}
+#home,#signup{
+    margin-top: 45px;
+    width: 50%;
+}
+
 .imgContainer{
-    margin-left: 36%;
     display: inline-block;
 
 }
@@ -32,10 +56,7 @@ body {
 
 }
 
-
-
 .buttonContainer{
    display: inline-block;
-   margin-left: 33%;
    margin-top: 40px;
 }
