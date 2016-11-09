@@ -40,7 +40,7 @@ nav{
     flex-grow: 1;
 }
 
-input[type=text],textarea{
+input,textarea{
     padding: 5px;
     font-family: sans-serif;
     border: 2px #000000 solid;
