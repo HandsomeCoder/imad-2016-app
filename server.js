@@ -50,6 +50,14 @@ app.get('/ui/css/blog.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/css', 'blog.css'));
 });
 
+app.get('/signup', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/html', 'signup.html'));
+});
+
+app.get('/signin', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/html', 'signin.html'));
+});
+
 app.get('/home', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/html', 'home.html'));
 });
@@ -182,6 +190,23 @@ app.get('/profile/fetchComment', function (req, res) {
     });
 
 });
+
+
+app.get('/siginup/user', function (req, res) {
+    var fname = req.query.fname;
+    var lname = req.query.lname;
+    var email = req.query.email;
+    var password = req.query.password;
+    pool.query('INSERT INTO "user" ("fname","lname","email","password") VALUES ($1,$2,$3,$4)',[fname,lname,email,password],function(err,rows){
+        if(err){
+            console.log("fail");
+        }
+        else{
+            res.send(`success`);
+        }
+    });
+});
+
 
 passport.use(new FacebookStrategy({
     clientID: configAuth.clientID,
