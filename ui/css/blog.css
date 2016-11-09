@@ -21,6 +21,10 @@ section#loggedin {
     font-weight: bold;
 }
 
+section#loggedin operationalButton {
+    visibility: hidden;
+}
+
 li{
     padding-top: 5px;
     padding-bottom: 5px;
