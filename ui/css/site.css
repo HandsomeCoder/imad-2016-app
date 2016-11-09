@@ -48,10 +48,6 @@ input,textarea{
     background: #e4f1f7;
 }
 
-textarea {
-    border-top: transparent;
-}
-
 ::-webkit-input-placeholder{
   color: #59606b;
 }
