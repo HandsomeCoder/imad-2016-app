@@ -218,7 +218,7 @@ app.post('/signup/user', function (req, res) {
     });
 });
 
-app.get('/signin/check', function (req, res) {
+app.post('/signin/check', function (req, res) {
     var uname = req.body.uname;
     var password = req.body.password;
     pool.query('SELECT * FROM "ceredentail" WHERE uname = $1', [uname], function (err, result) {
