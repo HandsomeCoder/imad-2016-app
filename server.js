@@ -76,11 +76,6 @@ app.get('/ui/images/ME_2.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/images', 'ME_2.jpg'));
 });
 
-app.get('/auth/facebook', passport.authenticate('facebook'));
-
-app.get('/auth/facebook/callback',
-  passport.authenticate('facebook', { successRedirect: '/home',
-                                      failureRedirect: '/' }));
 
 app.get('/blog', function (req, res) {
   res.send(createBlog());
@@ -162,7 +157,7 @@ app.get('/blog/q/fetchComment', function (req, res) {
             }
             res.send(commentContent);
         }
-    });
+    })
 
 });
 
