@@ -20,11 +20,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('index.css', function (req, res) {
+app.get('/index.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/css', 'index.css'));
 });
 
-app.get('sign.css', function (req, res) {
+app.get('/sign.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/css', 'sign.css'));
 });
 
