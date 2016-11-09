@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sign Up Page</title>
+  <link rel="stylesheet" href="sign.css"/>
 
+</head>
+<body>
+
+  <section>
+    <form name="signUpForm" id="signUpForm" action="" method="get">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2"> Sign Up Form </th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>
+          <label for="Fname"> Full Name: </label>
+        </td>
+        <td>
+          <input type="text" name="Fname" placeholder="First Name">
+          <input type="text" name="Mname" placeholder="Middle Name">
+          <input type="text" name="Lname" placeholder="Last Name">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="Email"> Email ID: </label>
+        </td>
+        <td>
+          <input type="email" name="Email" placeholder="14it120@charusat.edu.in">
+        </td>
+       </tr>
+       <tr>
+        <td>
+          <label for="password"> Password : </label>
+        </td>
+        <td>
+            <input type="password" name="Password" placeholder="password">
+        </td>
+       </tr>
+       <tr>
+        <td>
+          <label for="Cpassword"> Confirm Password : </label>
+        </td>
+        <td>
+            <input type="password" name="Cpassword" placeholder="password">
+        </td>
+       </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td>
+          <input type="reset">
+        </td>
+        <td>
+          <input type="submit">
+        </td>
+       </tr>
+      </tfoot>
+    </table>
+    </form>
+  </section>
+  <script type="text/javascript" src="signup.js"></script>
+</body>
+</html>
