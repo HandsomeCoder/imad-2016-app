@@ -242,7 +242,8 @@ app.get('/signin/check', function (req, res) {
               }
           }
       }
-});
+    });
+}
 
 function hash (input, salt) {
     // How do we create a hash?
