@@ -199,9 +199,11 @@ app.get('/signup/user', function (req, res) {
     var password = req.query.password;
     pool.query('INSERT INTO "user" ("fname","lname","email","password") VALUES ($1,$2,$3,$4)',[fname,lname,email,password],function(err,rows){
         if(err){
-            console.log("fail");
+            console.log('Fail');
+            res.sendFile(path.join(__dirname, 'ui/html', 'signup.html'));
         }
         else{
+            console.log('Success');
             res.sendFile(path.join(__dirname, 'ui/html', 'profile.html'));
         }
     });
