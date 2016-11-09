@@ -275,6 +275,12 @@ function createBlog(){
                 <link href="ui/css/blog.css" rel="stylesheet"/>
             </head>
             <body onload="getTitle()" >
+            <section id="loggedin">
+                <span>You are not Logged In.</span>
+                <div class="operationalButton __web-inspector-hide-shortcut__">
+                        logout
+                </div>
+  			</section>
             <nav>
                 <a href="/">
                     <div id="backButton" class="operationalButton">
