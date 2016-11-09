@@ -52,12 +52,10 @@ input:focus,select:focus{
   color: #59606b;
 }
 input[type=submit],input[type=reset]{
-    background-color: #ffffff;
     padding:5px 15px; 
     border:2px solid #000000;
     cursor:pointer;
     border-radius: 5px;
-    background-color: transparent;
 }
 
 input[type=submit]:focus,input[type=reset]:focus{
