@@ -19,6 +19,7 @@ body {
 .operationalButton:hover{
     color: #3081a6;
     border-color: #3081a6;
+    cursor: pointer;
 }
 
 nav{
