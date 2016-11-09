@@ -41,6 +41,7 @@ input,select{
   padding:5px; 
   border:2px #000000 solid; 
   border-radius: 5px;
+  background-color: transparent;
 }
 
 input:focus,select:focus{
@@ -55,7 +56,8 @@ input[type=submit],input[type=reset]{
     padding:5px 15px; 
     border:2px solid #000000;
     cursor:pointer;
-    border-radius: 5px; 
+    border-radius: 5px;
+    background-color: transparent;
 }
 
 input[type=submit]:focus,input[type=reset]:focus{
