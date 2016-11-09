@@ -79,25 +79,7 @@ app.get('/blog/:blogNum', function (req, res) {
   });
 });
 
-function executeQuery(str,callback){
-    pool.query(str,function(err,result){
-        if (err) {
-            callback(err,null);
-        } else {
-                callback(null,result.rows);
-        }
-    });
-}
 
-function getResult(str,callback){
-    executeQuery(str,function(err,rows){
-        if(!err){
-            callback(null,rows);
-        }else{
-            callback(true,null);
-        }
-    });
-}
 
 app.get('/blog/q/title', function (req, res) {
     var blogList = [];
@@ -183,6 +165,26 @@ app.get('/profile/fetchComment', function (req, res) {
     });
 
 });
+
+function executeQuery(str,callback){
+    pool.query(str,function(err,result){
+        if (err) {
+            callback(err,null);
+        } else {
+                callback(null,result.rows);
+        }
+    });
+}
+
+function getResult(str,callback){
+    executeQuery(str,function(err,rows){
+        if(!err){
+            callback(null,rows);
+        }else{
+            callback(true,null);
+        }
+    });
+}
 
 function createBlog(){
     var blogTemplate = `<!DOCTYPE html>
