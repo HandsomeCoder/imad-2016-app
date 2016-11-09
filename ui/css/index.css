@@ -1,1 +1,23 @@
-
+nav{
+    display: flex;
+}
+.button{
+    flex-grow:1;
+}
+section{
+    text-align: center;
+}
+#banner{
+    flex-grow:5;
+    font-size: 25px;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+#welcome{
+    font-size: 50px;
+    border:2px #000000 solid;
+    margin-left: 400px;
+    margin-right: 400px;
+    border-radius: 15px;
+    margin-top: 100px;
+}
