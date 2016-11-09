@@ -192,7 +192,7 @@ app.get('/profile/fetchComment', function (req, res) {
 });
 
 
-app.get('/siginup/user', function (req, res) {
+app.get('/signup/user', function (req, res) {
     var fname = req.query.fname;
     var lname = req.query.lname;
     var email = req.query.email;
