@@ -27,11 +27,11 @@ app.get('/', function (req, res) {
 });
 
 app.get('index.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui/css', 'site.css'));
+  res.sendFile(path.join(__dirname, 'ui/css', 'index.css'));
 });
 
 app.get('sign.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui/css', 'site.css'));
+  res.sendFile(path.join(__dirname, 'ui/css', 'sign.css'));
 });
 
 app.get('/ui/css/style.css', function (req, res) {
