@@ -157,7 +157,7 @@ app.get('/blog/q/fetchComment', function (req, res) {
             }
             res.send(commentContent);
         }
-    })
+    });
 
 });
 
