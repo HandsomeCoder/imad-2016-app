@@ -202,7 +202,7 @@ app.get('/signup/user', function (req, res) {
             console.log("fail");
         }
         else{
-            res.send(`success`);
+            res.sendFile(path.join(__dirname, 'ui/html', 'profile.html'));
         }
     });
 });
