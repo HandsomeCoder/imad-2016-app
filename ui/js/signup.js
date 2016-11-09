@@ -27,7 +27,7 @@ submit.onclick = function () {
         var lname = document.getElementById('lname').value;
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
-        console.log(username);
+        console.log(uname);
         console.log(password);
         request.open('POST', 'http://handsomecoder.imad.hasura-app.io/signup/user', true);
         request.setRequestHeader('Content-Type', 'application/json');
