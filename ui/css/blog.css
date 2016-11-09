@@ -29,7 +29,7 @@ h1{
     text-align: center;
 }
 
-input{
+input,textarea{
     width: 500px;
     max-width: 500px;
 }
