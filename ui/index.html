@@ -1,31 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
-        <title> Home Page </title>
-        <link href="ui/css/style.css" rel="stylesheet" />
-        <link href="ui/css/site.css" rel="stylesheet" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>IMAD WebApp</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="ui/css/site.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <section class="center imgContainer">
-            <img src="ui/images/ME_2.jpg" alt="My photo" class="img-medium"/>
+        <header>
+        </header>
+        <nav>
+            <div id="banner">
+                IMAD <br> WebApp
+            </div>
+            <a href="signup" target="_self">
+                <div class="operationalButton button">
+                    <span class="glyphicon glyphicon-user"></span> Sign Up
+                </div>
+            </a>
+            <a href="signin" target="_self">
+            <div class="operationalButton button">
+                <span class="glyphicon glyphicon-log-in"></span> Sign In
+            </div>
+            </a>  
+        </nav>
+
+
+        <section id="welcome">
+            <p> Welcome to <br> My WebApp <p>
         </section>
-        <br><br>
-        <section class="center text-big bold">
-            Hi! I am Harsh Shah.
-        </section>
-        <section class="buttonContainer">
-                <a href="../profile">
-                    <div class="operationalButton margin-left">
-                        Profile Page
-                    </div></a>
-                <a href="../blog">
-                    <div class="operationalButton margin-left">
-                        Blog Page
-                    </div>
-                </a>
-           </section>
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
     </body>
 </html>
