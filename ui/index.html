@@ -1,37 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>IMAD WebApp</title>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="ui/css/site.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <title> Home Page </title>
+        <link href="style.css" rel="stylesheet" />
+        <link href="site.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
     </head>
     <body>
-        <header>
-        </header>
         <nav>
             <div id="banner">
                 IMAD WebApp
             </div>
-            <a href="signup" target="_self">
-                <div class="operationalButton button">
-                    <span class="glyphicon glyphicon-user"></span> Sign Up
-                </div>
-            </a>
-            <a href="signin" target="_self">
-            <div class="operationalButton button">
-                <span class="glyphicon glyphicon-log-in"></span> Sign In
+
+            <div id="title">
+                My Profile
             </div>
-            </a>  
+            <input type="text" class="signin" id="uname" name="uname" placeholder="User name">
+            <input type="password" class="signin" id="password" name="password" placeholder="password">
+            <input type="submit" class="signin" id="submit" value="Sign In"> 
         </nav>
-
-
-        <section id="welcome">
-             Welcome to <br><br><br> My WebApp 
-        </section>
+        <div id="container">
+            <div id="home">
+                <center>
+                <section class=" imgContainer">
+                    <img src="ME_2.jpg" alt="My photo" class="img-medium"/>
+                </section>
+                <br><br>
+                <section class="text-big bold">
+                    Hi! I am Harsh Shah.
+                </section>
+                <section class="buttonContainer">
+                    <a href="../profile">
+                        <div class="operationalButton">
+                            Profile Page
+                        </div></a>
+                    <a href="../blog">
+                        <div class="operationalButton">
+                            Blog Page
+                        </div>
+                    </a>
+                </section>
+                </center>
+            </div>
+            <div id="signup">
+                <center>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2"> Register </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label for="email"> Username: </label>
+                            </td>
+                            <td>
+                                <input type="text" id="uname" name="uname" placeholder="handsomeCoder">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="fname"> Name: </label>
+                            </td>
+                            <td>
+                                <input type="text" id="fname" name="fname" placeholder="First Name">
+                                <input type="text" id="lname" name="lname" placeholder="Last Name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email"> Email ID: </label>
+                            </td>
+                            <td>
+                                <input type="email" id="email" name="email" placeholder="xyz@abc.com">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="password"> Password : </label>
+                            </td>
+                            <td>
+                                <input type="password" id="password" name="password" placeholder="password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="Cpassword"> Confirm Password : </label>
+                            </td>
+                            <td>
+                                <input type="password" id="password" name="cpassword" placeholder="password">
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <input type="reset">
+                            </td>
+                            <td>
+                                <input type="submit" id="submit">
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                </center>
+            </div>
+        </div>
+        <script type="text/javascript" src="/ui/main.js">
+        </script>
     </body>
 </html>
