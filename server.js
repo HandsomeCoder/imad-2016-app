@@ -219,18 +219,29 @@ app.post('/signup/user', function (req, res) {
 });
 
 app.get('/signin/check', function (req, res) {
-    var email = req.query.email;
-    var password = req.query.password;
-    pool.query('select * from "signin" where email = $1 and password = $2',[email,password],function(err,rows){
-        if(err){
-            console.log('Fail');
-            res.sendFile(path.join(__dirname, 'ui/html', 'signin.html'));
-        }
-        else{
-            console.log('Success');
-            res.sendFile(path.join(__dirname, 'ui/html', 'profile.html'));
-        }
-    });
+    var uname = req.body.uname;
+    var password = req.body.password;
+ pool.query('SELECT * FROM "ceredentail" WHERE uname = $1', [uname], function (err, result) {
+      if (err) {
+          res.status(500).send(err.toString());
+      } else {
+          if (result.rows.length === 0) {
+              res.status(403).send('username/password is invalid');
+          } else {
+
+              var dbString = result.rows[0].password;
+              var salt = dbString.split('$')[2];
+              var hashedPassword = hash(password, salt);
+              if (hashedPassword === dbString) {
+                
+                req.session.auth = {userId: result.rows[0].id};
+                res.send('credentials correct!');
+                
+              } else {
+                res.status(403).send('username/password is invalid');
+              }
+          }
+      }
 });
 
 function hash (input, salt) {
