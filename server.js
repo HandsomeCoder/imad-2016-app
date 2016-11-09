@@ -209,6 +209,21 @@ app.get('/signup/user', function (req, res) {
     });
 });
 
+app.get('/signin/check', function (req, res) {
+    var email = req.query.email;
+    var password = req.query.password;
+    pool.query('select * from "signin" where email = $1 and password = $2',[email,password],function(err,rows){
+        if(err){
+            console.log('Fail');
+            res.sendFile(path.join(__dirname, 'ui/html', 'signin.html'));
+        }
+        else{
+            console.log('Success');
+            res.sendFile(path.join(__dirname, 'ui/html', 'profile.html'));
+        }
+    });
+});
+
 
 passport.use(new FacebookStrategy({
     clientID: configAuth.clientID,
