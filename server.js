@@ -193,7 +193,7 @@ app.get('/signup/user', function (req, res) {
         }
         else{
             console.log('Success');
-            res.sendFile(path.join(__dirname, 'ui/html', 'profile.html'));
+            res.sendFile(path.join(__dirname, 'ui/html', 'home.html'));
         }
     });
 });
