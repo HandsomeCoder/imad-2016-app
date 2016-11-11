@@ -29,10 +29,6 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/index.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui/css', 'index.css'));
-});
-
 app.get('/sign.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/css', 'sign.css'));
 });
@@ -62,12 +58,8 @@ app.get('/profile', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/html', 'profile.html'));
 });
 
-app.get('/ui/js/signin.js', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui/js', 'signin.js'));
-});
-
-app.get('/ui/js/signup.js', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui/js', 'signup.js'));
+app.get('/ui/js/sign.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/js', 'sign.js'));
 });
 
 app.get('/ui/js/blog.js', function (req, res) {
