@@ -242,7 +242,7 @@ app.post('/signin/check', function (req, res) {
 });
 
 app.get('/getName', function (req, res) {
-    console.log(req.session.auth.fname.toString()+" "+req.session.auth.lname.toString())
+    console.log(req.session.auth.fname+" "+req.session.auth.lname);
     res.send("In");
 });
 
