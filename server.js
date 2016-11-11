@@ -88,7 +88,7 @@ app.get('/ui/images/ME_2.jpg', function (req, res) {
 
 
 app.get('/blog', function (req, res) {
-    console.log(checkLogin);
+    console.log(checkLogin(req));
   res.send(createBlog());
 });
 
