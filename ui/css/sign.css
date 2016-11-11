@@ -24,3 +24,6 @@ input[type=reset]{
     border: transparent;
 }
 
+#resetin:hover,#resetup:hover{
+    cursor: pointer;
+}
