@@ -216,7 +216,7 @@ app.post('/signin/check', function (req, res) {
     var email = req.body.email;
     var password = req.body.password;
     console.log("Data->"+email+" "+password);
-    pool.query('SELECT * FROM "ceredentail" WHERE email = $1', [email], function (err, result) {
+    pool.query('SELECT * FROM "user" WHERE email = $1', [email], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
@@ -229,7 +229,7 @@ app.post('/signin/check', function (req, res) {
               var hashedPassword = hash(password, salt);
               if (hashedPassword === dbString) {
                 
-                req.session.auth = {userId: result.rows[0].id};
+                req.session.auth = {userId: result.rows[0].id,fname: result.rows[0].fname,fname: result.rows[0].lname};
                 console.log(req.session.auth.userId.toString());
                 res.send('credentials correct!');
                 
@@ -239,6 +239,24 @@ app.post('/signin/check', function (req, res) {
           }
       }
     });
+});
+
+app.get('/blog/q/title', function (req, res) {
+    var blogList = [];
+   getResult("SELECT title FROM blog",function(err,rows){
+      if(err){
+          
+      }else{
+          for(i = 0;i < rows.length;i++){
+              blogList.push(rows[i].title);
+          }
+          var titleContent = ``;
+          for(i = 0;i < blogList.length;i++){
+            titleContent += `<li onclick="getBlog(${i+1})"> ${blogList[i]} </li>`;
+           }
+          res.send(titleContent);
+      } 
+   });
 });
 
 function hash (input, salt) {
