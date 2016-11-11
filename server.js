@@ -286,7 +286,7 @@ function createBlog(checkLogin){
     if(checkLogin){
         blogTemplate+=`<body onload="getTitleAndName()" >
             <section id="loggedin">
-                <span></span>
+                <span id="username"></span>
                 <div class="operationalButton">
                         logout
                 </div>
