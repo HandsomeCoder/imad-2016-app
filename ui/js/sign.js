@@ -57,6 +57,43 @@ function validateonsignup(){
     }
 }
 
+function validateonsignin(){
+
+    var email = document.getElementById('emailin');
+    var password = document.getElementById('passwordin');
+
+
+    email.classList.remove("invalid");
+    password.classList.remove("invalid");
+
+    var check = true;
+
+    if(email.value === ""){
+        email.classList.add("invalid");
+        check = false;
+    }
+    if(password.value === ""){
+        password.classList.add("invalid");
+        check = false;
+    }
+
+    if(password.value.length >= 4 || password.value.length <= 15){
+        password.classList.add("invalid");
+        cpassword.classList.add("invalid");
+        alert("Password length should be between 4 to 15 characters");
+        check = false;
+    }
+    if(check){
+        email.classList.remove("invalid");
+        password.classList.remove("invalid");
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+
 var signup = document.getElementById('signupBtn');
 signup.onclick = function () {
     if(validateonsignup() === true){
@@ -92,6 +129,7 @@ signup.onclick = function () {
     
 var signin = document.getElementById('signinBtn');
 signin.onclick = function () {
+    if(validateonsignin() === true){
         var request = new XMLHttpRequest();
         
         // Capture the response and store it in a variable
@@ -123,5 +161,5 @@ signin.onclick = function () {
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({email: email,password: password}));  
         signin.value = 'Logging in...';
-        
-    };
+    }
+};
