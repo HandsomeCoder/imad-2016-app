@@ -213,14 +213,14 @@ app.post('/signup/user', function (req, res) {
 });
 
 app.post('/signin/check', function (req, res) {
-    var uname = req.body.uname;
+    var email = req.body.email;
     var password = req.body.password;
-    pool.query('SELECT * FROM "ceredentail" WHERE uname = $1', [uname], function (err, result) {
+    pool.query('SELECT * FROM "ceredentail" WHERE uname = $1', [email], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
           if (result.rows.length === 0) {
-              res.status(403).send('username/password is invalid');
+              res.status(403).send('email/password is invalid');
           } else {
 
               var dbString = result.rows[0].password;
@@ -232,7 +232,7 @@ app.post('/signin/check', function (req, res) {
                 res.send('credentials correct!');
                 
               } else {
-                res.status(403).send('username/password is invalid');
+                res.status(403).send('email/password is invalid');
               }
           }
       }
