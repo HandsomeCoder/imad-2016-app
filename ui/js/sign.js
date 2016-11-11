@@ -38,6 +38,12 @@ function validateonsignup(){
         alert("Password and Confirm Password Should be Same");
         check = false;
     }
+    if(password.value !== "" && cpassword.value !== "" && password.length >= 4 && password.length <= 15){
+        password.classList.add("invalid");
+        cpassword.classList.add("invalid");
+        alert("Password and Confirm Password Should be Same");
+        check = false;
+    }
     if(check){
         fname.classList.remove("invalid");
         lname.classList.remove("invalid");
