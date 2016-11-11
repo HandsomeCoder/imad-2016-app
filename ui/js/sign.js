@@ -77,7 +77,7 @@ function validateonsignin(){
         check = false;
     }
 
-    if((password.value === "") &&(password.value.length >= 4 || password.value.length <= 15)){
+    if((password.value !== "") &&(password.value.length >= 4 || password.value.length <= 15)){
         password.classList.add("invalid");
         alert("Password length should be between 4 to 15 characters");
         check = false;
