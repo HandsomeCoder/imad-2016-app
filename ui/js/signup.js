@@ -1,4 +1,4 @@
-var signup = document.getElementById('signup');
+var signup = document.getElementById('signupBtn');
 signup.onclick = function () {
         var request = new XMLHttpRequest();
         
@@ -35,7 +35,7 @@ signup.onclick = function () {
         
     };
     
-var signin = document.getElementById('signin');
+var signin = document.getElementById('signinBtn');
 signin.onclick = function () {
         var request = new XMLHttpRequest();
         
