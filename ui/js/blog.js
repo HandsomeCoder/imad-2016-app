@@ -53,4 +53,18 @@ function getTitleAndName(){
 
 function writeComment(){
     window.location.assign("http://handsomecoder.imad.hasura-app.io/sign");
-};
+}
+
+function logout(){
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+    if (request.readyState === XMLHttpRequest.DONE) {
+          if (request.status === 200) {
+                window.location.assign("http://handsomecoder.imad.hasura-app.io/sign");  
+          }
+      }  
+    };
+    
+    request.open('GET', 'http://handsomecoder.imad.hasura-app.io/logout', true);
+    request.send(null);
+}
