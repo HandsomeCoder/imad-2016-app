@@ -100,7 +100,7 @@ app.get('/blog/:blogNum', function (req, res) {
         if (result.rows.length === 0) {
             res.status(404).send('Blog not found');
         } else {
-            res.send(createBlogContent(result.rows[0]));
+            res.send(createBlogContent(result.rows[0],checkLogin(req)));
         }
     }
   });
@@ -335,7 +335,7 @@ function createBlog(checkLogin){
     return blogTemplate;
 }
 
-function createBlogContent(data){
+function createBlogContent(data,checkLogin){
     var id = data.id;
     
     var title = data.title;
@@ -352,12 +352,20 @@ function createBlogContent(data){
                     <h3> Comments : </h3>
                     <div id="postedComment">
 
-                    </div>
-                    <div>
+                    </div>`;
+    
+        if(checkLogin){
+            blogTemp+=`<div>
                         <textarea id="comment" placeholder="Enter your Comment" rows="4"></textarea><br>
                         <input class="float-right" type="submit" value="Submit" onclick="addComment('b')"/>
                     </div>
                 </section>`;
+        }else{
+            blogTemp+=`<div class="operationalButton" id="writeComment">
+                        Write Comment
+                    </div>
+                </section>`;
+        }
     return blogTemp;
 }
 
