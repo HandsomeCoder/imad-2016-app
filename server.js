@@ -319,6 +319,7 @@ function createBlog(checkLogin){
                         </div>
                         <div id="titleSection">
                         <ol id="blogTitle" start="1">
+                            Loading Title...
                         </ol>    
                         </div>
                     </section>
