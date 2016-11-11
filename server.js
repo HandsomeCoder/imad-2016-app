@@ -147,7 +147,7 @@ app.get('/profile/comment', function (req, res) {
 app.get('/blog/q/fetchComment', function (req, res) {
     var blogId = req.query.blogId;
     var commentContent = ``; 
-    getResult('SELECT name,comment FROM "commentRecord" WHERE blogId='+blogId,function(err,rows){
+    getResult('SELECT name,comment,time FROM "commentRecord" WHERE blogId='+blogId,function(err,rows){
         if(err){
             
         }
@@ -156,6 +156,8 @@ app.get('/blog/q/fetchComment', function (req, res) {
                 commentContent += `<span class="bold"> ${rows[i].name}:</span>
                                    <br>
                                    <span> ${rows[i].comment} </span>
+                                   <br>
+                                   <span><i> ${row[i].time} <i></span>
                                    <br><br>`;
             }
             res.send(commentContent);
