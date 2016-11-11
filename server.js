@@ -207,7 +207,7 @@ app.post('/signup/user', function (req, res) {
         }
         else{
             console.log('Success');
-            res.send(createBlog(checkLogin(req)))
+            res.send(createBlog(checkLogin(req)));
         }
     });
 });
