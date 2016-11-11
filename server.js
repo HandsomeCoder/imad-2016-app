@@ -193,14 +193,13 @@ app.get('/profile/fetchComment', function (req, res) {
 
 
 app.post('/signup/user', function (req, res) {
-    var uname = req.body.uname;
     var fname = req.body.fname;
     var lname = req.body.lname;
     var email = req.body.email;
     var password = req.body.password;
     var salt = crypto.randomBytes(128).toString('hex');
     var dbString = hash(password, salt);
-    pool.query('INSERT INTO "user" ("uname","fname","lname","email","password") VALUES ($1,$2,$3,$4,$5)',[uname,fname,lname,email,dbString],function(err,rows){
+    pool.query('INSERT INTO "user" ("fname","lname","email","password") VALUES ($1,$2,$3,$4)',[fname,lname,email,dbString],function(err,rows){
         if(err){
             console.log('Fail');
             res.sendFile(path.join(__dirname, 'ui/html', 'signup.html'));
