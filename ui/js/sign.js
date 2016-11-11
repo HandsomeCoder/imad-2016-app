@@ -39,7 +39,11 @@ function validateonsignup(){
         check = false;
     }
     if(check){
-        comment.classList.remove("invalid");
+        fname.classList.remove("invalid");
+        lname.classList.remove("invalid");
+        email.classList.remove("invalid");
+        password.classList.remove("invalid");
+        cpassword.classList.remove("invalid");
         return true;
     }
     else{
