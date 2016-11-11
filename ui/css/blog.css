@@ -17,17 +17,6 @@ body{
     min-height: 75vh;
 }
 
-
-#loggedin {
-    padding: 15px 0;
-    text-align: right;
-    font-weight: bold;
-}
-
-#loggedin .operationalButton {
-    visibility: hidden;
-}
-
 li{
     padding-top: 5px;
     padding-bottom: 5px;
