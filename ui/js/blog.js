@@ -31,6 +31,22 @@ function getTitle(){
     request.send(null);
 }
 
+function getTitle(){
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+    if (request.readyState === XMLHttpRequest.DONE) {
+          if (request.status === 200) {
+
+                document.getElementById('username').innerHTML =  request.responseText;   
+          }
+      }  
+    };
+    
+    request.open('GET', 'http://handsomecoder.imad.hasura-app.io/q/name', true);
+    request.send(null);
+}
+
 function getTitleAndName(){
     getTitle();
+    getName();
 }
