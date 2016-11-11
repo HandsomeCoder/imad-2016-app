@@ -24,8 +24,8 @@ signup.onclick = function () {
         // Make the request
         var fname = document.getElementById('fname').value;
         var lname = document.getElementById('lname').value;
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
+        var email = document.getElementById('emailup').value;
+        var password = document.getElementById('passwordup').value;
         console.log(fname);
         console.log(password);
         request.open('POST', 'http://handsomecoder.imad.hasura-app.io/signup/user', true);
@@ -59,8 +59,8 @@ signin.onclick = function () {
         };
         
         // Make the request
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
+        var email = document.getElementById('emailin').value;
+        var password = document.getElementById('passwordin').value;
         console.log(email);
         console.log(password);
         request.open('POST', 'http://handsomecoder.imad.hasura-app.io/signin/check', true);
