@@ -7,6 +7,16 @@ body {
     line-height: 1.5rem;
 }
 
+#loggedin {
+    padding: 15px 0;
+    text-align: right;
+    font-weight: bold;
+}
+
+#loggedin .operationalButton {
+    visibility: hidden;
+}
+
 .operationalButton{
     display: inline-block;
     border:2px #000000 solid;
