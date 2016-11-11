@@ -361,7 +361,7 @@ function createBlogContent(data,checkLogin){
                     </div>
                 </section>`;
         }else{
-            blogTemp+=`<div class="operationalButton" id="writeComment">
+            blogTemp+=`<div class="operationalButton" onclick="writeComment()">
                         Write Comment
                     </div>
                 </section>`;
