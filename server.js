@@ -88,6 +88,7 @@ app.get('/ui/images/ME_2.jpg', function (req, res) {
 
 
 app.get('/blog', function (req, res) {
+    console.log(checkLogin);
   res.send(createBlog());
 });
 
@@ -344,6 +345,14 @@ function createBlogContent(data){
     return blogTemp;
 }
 
+function checkLogin(req){
+    if(req.session && req.session.auth && req.session.auth.userId){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
