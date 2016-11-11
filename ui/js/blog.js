@@ -31,3 +31,6 @@ function getTitle(){
     request.send(null);
 }
 
+function getTitleAndName(){
+    getTitle();
+}
