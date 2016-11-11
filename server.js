@@ -229,7 +229,7 @@ app.post('/signin/check', function (req, res) {
               if (hashedPassword === dbString) {
                 
                 req.session.auth = {userId: result.rows[0].id};
-                console.log(req.session.auth.userId);
+                console.log(req.session.auth.userId.toString());
                 res.send('credentials correct!');
                 
               } else {
