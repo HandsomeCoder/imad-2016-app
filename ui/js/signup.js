@@ -45,7 +45,7 @@ signin.onclick = function () {
               // Take some action
               if (request.status === 200) {
                   signin.value = 'Sucess!';
-                   window.location.assign("http://handsomecoder.imad.hasura-app.io/blog");
+                   window.histroy.back();
               } else if (request.status === 403) {
                   signin.value = 'Invalid credentials. Try again?';
               } else if (request.status === 500) {
