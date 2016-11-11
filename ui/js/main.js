@@ -1,19 +1,12 @@
 function validate(){
-    var name = document.getElementById('name');
     var comment = document.getElementById('comment');
-    name.classList.remove("invalid");
     comment.classList.remove("invalid");
     var check = true;
-    if(name.value === ""){
-        name.classList.add("invalid");
-        check = false;
-    }
     if(comment.value === ""){
         comment.classList.add("invalid");
         check = false;
     }
     if(check){
-        name.classList.remove("invalid");
         comment.classList.remove("invalid");
         return true;
     }
