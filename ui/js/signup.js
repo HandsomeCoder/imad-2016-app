@@ -1,5 +1,5 @@
-var submit = document.getElementById('submit');
-submit.onclick = function () {
+var signup = document.getElementById('signup');
+signup.onclick = function () {
         var request = new XMLHttpRequest();
         
         // Capture the response and store it in a variable
@@ -35,8 +35,8 @@ submit.onclick = function () {
         
     };
     
-var submit = document.getElementById('submit');
-submit.onclick = function () {
+var signin = document.getElementById('signin');
+signin.onclick = function () {
         var request = new XMLHttpRequest();
         
         // Capture the response and store it in a variable
@@ -59,13 +59,13 @@ submit.onclick = function () {
         };
         
         // Make the request
-        var uname = document.getElementById('uname').value;
+        var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
-        console.log(uname);
+        console.log(email);
         console.log(password);
         request.open('POST', 'http://handsomecoder.imad.hasura-app.io/signin/check', true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({uname: uname,password: password}));  
+        request.send(JSON.stringify({email: email,password: password}));  
         submit.value = 'Logging in...';
         
     };
