@@ -35,7 +35,7 @@ function validateonsignup(){
     if(password.value !== "" && cpassword.value !== "" && cpassword.value !== password.value){
         password.classList.add("invalid");
         cpassword.classList.add("invalid");
-        alert("Password and Confirm Password \n Should be Same");
+        alert("<b>Password and Confirm Password Should be Same</b>");
         check = false;
     }
     if(check){
