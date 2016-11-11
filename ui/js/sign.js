@@ -94,6 +94,23 @@ function validateonsignin(){
     }
 }
 
+var resetin = document.getElementById('resetin');
+resetin.onclick = function(){
+    
+    document.getElementById('emailin').value = "";
+    document.getElementById('passwordin').value = "";
+ 
+};
+
+var resetup = document.getElementById('resetup');
+resetup.onclick = function(){
+    
+    document.getElementById('fname').value = "";
+    document.getElementById('lname').value = "";
+    document.getElementById('emailup').value = "";
+    document.getElementById('passwordup').value = "";
+    document.getElementById('cpassword').value = "";    
+};
 
 var signup = document.getElementById('signupBtn');
 signup.onclick = function () {
