@@ -41,7 +41,7 @@ function validateonsignup(){
     if(password.value !== "" && cpassword.value !== "" && password.value.length >= 4 && password.value.length <= 15){
         password.classList.add("invalid");
         cpassword.classList.add("invalid");
-        alert("Password and Confirm Password Should be Same");
+        alert("Password length should be between 4 to 15 characters");
         check = false;
     }
     if(check){
