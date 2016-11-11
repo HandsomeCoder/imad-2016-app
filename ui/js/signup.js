@@ -45,7 +45,7 @@ signin.onclick = function () {
               // Take some action
               if (request.status === 200) {
                   signin.value = 'Sucess!';
-                   window.history.back();
+                   window.location.href = window.history.back(1);
               } else if (request.status === 403) {
                   signin.value = 'Invalid credentials. Try again?';
               } else if (request.status === 500) {
