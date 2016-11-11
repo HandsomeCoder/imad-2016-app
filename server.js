@@ -241,22 +241,9 @@ app.post('/signin/check', function (req, res) {
     });
 });
 
-app.get('/blog/q/title', function (req, res) {
-    var blogList = [];
-   getResult("SELECT title FROM blog",function(err,rows){
-      if(err){
-          
-      }else{
-          for(i = 0;i < rows.length;i++){
-              blogList.push(rows[i].title);
-          }
-          var titleContent = ``;
-          for(i = 0;i < blogList.length;i++){
-            titleContent += `<li onclick="getBlog(${i+1})"> ${blogList[i]} </li>`;
-           }
-          res.send(titleContent);
-      } 
-   });
+app.get('/getName', function (req, res) {
+    console.log(req.session.auth.fname.toString()+" "+req.session.auth.lname.toString())
+    res.send("In");
 });
 
 function hash (input, salt) {
