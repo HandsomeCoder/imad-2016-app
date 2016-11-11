@@ -51,7 +51,6 @@ function getTitleAndName(){
     getName();
 }
 
-var writeComment = document.getElementById('writeComment');
-writeComment.onclick = function(){
+function writeComment(){
     window.location.assign("http://handsomecoder.imad.hasura-app.io/sign");
 };
