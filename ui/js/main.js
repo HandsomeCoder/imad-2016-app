@@ -19,7 +19,7 @@ function validate(){
 function addComment(x){
     if(validate()){
         var request = new XMLHttpRequest();
-        var name = document.getElementById('username');
+        var name = document.getElementById('username').innerHTML;
         var comment = document.getElementById('comment').value;
         
         if(x == 'b'){
