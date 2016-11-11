@@ -89,7 +89,7 @@ app.get('/ui/images/ME_2.jpg', function (req, res) {
 
 app.get('/blog', function (req, res) {
     console.log(checkLogin(req));
-  res.send(createBlog());
+  res.send(createBlog(checkLogin(req)));
 });
 
 app.get('/blog/:blogNum', function (req, res) {
@@ -265,7 +265,7 @@ function getResult(str,callback){
     });
 }
 
-function createBlog(){
+function createBlog(checkLogin){
     var blogTemplate = `<!DOCTYPE html>
         <html>
             <head>
@@ -275,14 +275,23 @@ function createBlog(){
                 <link href="ui/css/site.css" rel="stylesheet"/>
                 <link href="ui/css/blog.css" rel="stylesheet"/>
             </head>
-            <body onload="getTitle()" >
+            `;
+    if(checklogin){
+        var blogTemplate+=`<body onload="getTitleAndName()" >
             <section id="loggedin">
-                <span>You are not Logged In.</span>
-                <div class="operationalButton __web-inspector-hide-shortcut__">
+                <span></span>
+                <div class="operationalButton">
                         logout
                 </div>
-  			</section>
-            <nav>
+  			</section>`;
+    }else{
+        var blogTemplate+=`<body onload="getTitle()" >
+            <section id="loggedin">
+                <span>You are not Logged In.</span>
+        	</section>`;   
+    }
+  			
+  	var blogTemplate+=`<nav>
                 <a href="/">
                     <div id="backButton" class="operationalButton">
                         Home
