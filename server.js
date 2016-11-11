@@ -277,7 +277,7 @@ function createBlog(checkLogin){
             </head>
             `;
     if(checklogin){
-        var blogTemplate+=`<body onload="getTitleAndName()" >
+        blogTemplate+=`<body onload="getTitleAndName()" >
             <section id="loggedin">
                 <span></span>
                 <div class="operationalButton">
@@ -285,13 +285,13 @@ function createBlog(checkLogin){
                 </div>
   			</section>`;
     }else{
-        var blogTemplate+=`<body onload="getTitle()" >
+        blogTemplate+=`<body onload="getTitle()" >
             <section id="loggedin">
                 <span>You are not Logged In.</span>
         	</section>`;   
     }
   			
-  	var blogTemplate+=`<nav>
+  	blogTemplate+=`<nav>
                 <a href="/">
                     <div id="backButton" class="operationalButton">
                         Home
