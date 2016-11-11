@@ -26,7 +26,7 @@ function validate(){
 function addComment(x){
     if(validate()){
         var request = new XMLHttpRequest();
-        var name = document.getElementById('name').value;
+        var name = document.getElementById('username').value;
         var comment = document.getElementById('comment').value;
         
         if(x == 'b'){
@@ -37,7 +37,6 @@ function addComment(x){
               if (request.readyState === XMLHttpRequest.DONE) {
                   if (request.status === 200) {
                         loadComment(blogId,false);
-                        document.getElementById('name').value = "";
                         document.getElementById('comment').value = "";
                   }
               }  
