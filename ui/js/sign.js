@@ -38,11 +38,13 @@ function validateonsignup(){
         alert("Password and Confirm Password Should be Same");
         check = false;
     }
-    if(password.value.length >= 4 || password.value.length <= 15){
-        password.classList.add("invalid");
-        cpassword.classList.add("invalid");
-        alert("Password length should be between 4 to 15 characters");
-        check = false;
+    if(password.value !== "" && cpassword.value !== ""){
+        if(password.value.length >= 4 || password.value.length <= 15){
+            password.classList.add("invalid");
+            cpassword.classList.add("invalid");
+            alert("Password length should be between 4 to 15 characters");
+            check = false;
+        }
     }
     if(check){
         fname.classList.remove("invalid");
