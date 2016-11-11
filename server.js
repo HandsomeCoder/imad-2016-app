@@ -215,7 +215,7 @@ app.post('/signup/user', function (req, res) {
 app.post('/signin/check', function (req, res) {
     var email = req.body.email;
     var password = req.body.password;
-    console.log(email+" "+password);
+    console.log("Data->"+email+" "+password);
     pool.query('SELECT * FROM "ceredentail" WHERE email = $1', [email], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
