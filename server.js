@@ -276,7 +276,7 @@ function createBlog(checkLogin){
                 <link href="ui/css/blog.css" rel="stylesheet"/>
             </head>
             `;
-    if(checklogin){
+    if(checkLogin){
         blogTemplate+=`<body onload="getTitleAndName()" >
             <section id="loggedin">
                 <span></span>
