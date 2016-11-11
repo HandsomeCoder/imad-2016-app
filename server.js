@@ -202,11 +202,9 @@ app.post('/signup/user', function (req, res) {
     pool.query('INSERT INTO "user" ("fname","lname","email","password") VALUES ($1,$2,$3,$4)',[fname,lname,email,dbString],function(err,rows){
         if(err){
             console.log('Fail');
-            res.sendFile(path.join(__dirname, 'ui/html', 'signup.html'));
         }
         else{
             console.log('Success');
-            res.sendFile(path.join(__dirname, 'ui/html', 'home.html'));
         }
     });
 });
