@@ -157,7 +157,7 @@ app.get('/blog/q/fetchComment', function (req, res) {
                                    <br>
                                    <span> ${rows[i].comment} </span>
                                    <br>
-                                   <span><i> ${rows[i].time} <i></span>
+                                   <span><i> ${rows[i].time.toDateString()} <i></span>
                                    <br><br>`;
             }
             res.send(commentContent);
