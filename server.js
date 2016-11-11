@@ -240,6 +240,11 @@ app.get('/getName', function (req, res) {
     res.send(req.session.auth.fname+" "+req.session.auth.lname);
 });
 
+app.get('/logout', function (req, res) {
+   delete req.session.auth;
+   res.send('done');
+});
+
 function hash (input, salt) {
     // How do we create a hash?
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
