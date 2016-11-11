@@ -22,7 +22,6 @@ submit.onclick = function () {
         };
         
         // Make the request
-        var uname = document.getElementById('uname').value;
         var fname = document.getElementById('fname').value;
         var lname = document.getElementById('lname').value;
         var email = document.getElementById('email').value;
@@ -31,7 +30,7 @@ submit.onclick = function () {
         console.log(password);
         request.open('POST', 'http://handsomecoder.imad.hasura-app.io/signup/user', true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({uname: uname,fname: fname,lname: lname,email: email, password: password}));  
+        request.send(JSON.stringify({fname: fname,lname: lname,email: email, password: password}));  
         submit.value = 'Logging in...';
         
     };
