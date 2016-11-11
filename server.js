@@ -157,7 +157,7 @@ app.get('/blog/q/fetchComment', function (req, res) {
                                    <br>
                                    <span> ${rows[i].comment} </span>
                                    <br>
-                                   <span class="small-font"><i> ${rows[i].time.toDateString()} <i></span>
+                                   <span class="small-font"><i> ${rows[i].time.toLocaleTimeString()} on ${rows[i].time.toLocaleDateString()} <i></span>
                                    <br><br>`;
             }
             res.send(commentContent);
