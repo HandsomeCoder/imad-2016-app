@@ -31,7 +31,7 @@ function getTitle(){
     request.send(null);
 }
 
-function getTitle(){
+function getName(){
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
     if (request.readyState === XMLHttpRequest.DONE) {
@@ -42,7 +42,7 @@ function getTitle(){
       }  
     };
     
-    request.open('GET', 'http://handsomecoder.imad.hasura-app.io/q/name', true);
+    request.open('GET', 'http://handsomecoder.imad.hasura-app.io/getName', true);
     request.send(null);
 }
 
