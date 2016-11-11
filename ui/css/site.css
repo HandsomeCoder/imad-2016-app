@@ -12,10 +12,6 @@ body {
     font-weight: bold;
 }
 
-#loggedin .operationalButton {
-    visibility: hidden;
-}
-
 .operationalButton{
     display: inline-block;
     border:2px #000000 solid;
