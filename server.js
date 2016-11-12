@@ -339,7 +339,7 @@ function createBlogContent(data,checkLogin){
     var id = data.id;
     
     var title = data.title;
-    var date = data.date.toDateString();
+    var date = data.date.toLocaleDateString();
     var content = data.content;
     
     var blogTemp=`<h1><span id="blogId">${id}</span>. ${title} </h1>
