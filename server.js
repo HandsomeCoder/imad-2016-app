@@ -280,6 +280,7 @@ function createBlog(checkLogin){
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link href="ui/css/site.css" rel="stylesheet"/>
                 <link href="ui/css/blog.css" rel="stylesheet"/>
+                <link rel="icon" href="ui/images/MEicon.ico">
             </head>
             `;
     if(checkLogin){
