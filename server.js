@@ -70,8 +70,8 @@ app.get('/ui/js/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/js', 'main.js'));
 });
 
-app.get('/ui/images/ME_0.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui/images', 'ME_0.jpg'));
+app.get('/ui/images/MEicon.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/images', 'MEicon.ico'));
 });
 
 app.get('/ui/images/ME_2.jpg', function (req, res) {
