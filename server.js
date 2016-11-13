@@ -77,7 +77,7 @@ app.get('/ui/images/ME_2.jpg', function (req, res) {
 
 app.get('/blog', function (req, res) {
     console.log(checkLogin(req));
-  res.send(createBlog(checkLogin(req)));
+  res.send(createBlog(true);
 });
 
 app.get('/blog/:blogNum', function (req, res) {
