@@ -1,25 +1,3 @@
-function addInvalid(){
-    var fname = document.getElementById('fname');
-    var lname = document.getElementById('lname');
-    var email = document.getElementById('emailup');
-    var password = document.getElementById('passwordup');
-    var cpassword = document.getElementById('cpassword');
-    
-    fname.classList.add("invalid");
-    lname.classList.add("invalid");
-    email.classList.add("invalid");
-    password.classList.add("invalid");
-    cpassword.classList.add("invalid");
-    removeInvalid(fname,lname,email,password,cpassword);
-}
-function removeInvalid(fname,lname,email,password,cpassword){
-
-    fname.classList.remove("invalid");
-    lname.classList.remove("invalid");
-    email.classList.remove("invalid");
-    password.classList.remove("invalid");
-    cpassword.classList.remove("invalid");
-}
 function validateonsignup(){
     var fname = document.getElementById('fname');
     var lname = document.getElementById('lname');
@@ -129,7 +107,6 @@ signup.onclick = function () {
                 } else if (request.status === 403) {
                       signup.value = 'Submit';
                       alert("User already Registered");
-                      addInvalid();
                 } else if (request.status === 500) {
                     alert('Something went wrong on the server');
                       signup.value = 'Login';
