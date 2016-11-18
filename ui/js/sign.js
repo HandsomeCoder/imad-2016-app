@@ -1,12 +1,18 @@
 function addInvalid(){
+    var fname = document.getElementById('fname');
+    var lname = document.getElementById('lname');
+    var email = document.getElementById('emailup');
+    var password = document.getElementById('passwordup');
+    var cpassword = document.getElementById('cpassword');
+    
     fname.classList.add("invalid");
     lname.classList.add("invalid");
     email.classList.add("invalid");
     password.classList.add("invalid");
     cpassword.classList.add("invalid");
-    removeInvalid();
+    removeInvalid(fname,lname,email,password,cpassword);
 }
-function removeInvalid(){
+function removeInvalid(fname,lname,email,password,cpassword){
 
     fname.classList.remove("invalid");
     lname.classList.remove("invalid");
