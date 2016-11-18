@@ -1,10 +1,13 @@
-function alreadyUser(){
+function addInvalid(){
     fname.classList.add("invalid");
     lname.classList.add("invalid");
     email.classList.add("invalid");
     password.classList.add("invalid");
     cpassword.classList.add("invalid");
-    
+    removeInvalid();
+}
+function removeInvalid(){
+
     fname.classList.remove("invalid");
     lname.classList.remove("invalid");
     email.classList.remove("invalid");
@@ -118,8 +121,9 @@ signup.onclick = function () {
                 if (request.status === 200) {
                       signup.value = 'Sucess!';
                 } else if (request.status === 403) {
-                        alreadyUser();
+                      signup.value = 'Submit';
                       alert("User already Registered");
+                      addInvalid();
                 } else if (request.status === 500) {
                     alert('Something went wrong on the server');
                       signup.value = 'Login';
