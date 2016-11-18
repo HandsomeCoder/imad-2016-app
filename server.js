@@ -195,10 +195,10 @@ app.post('/signup/user', function (req, res) {
        }
        else{
             if(result.rows.length === 0){
-                console.log("not user"+result.rows.lenght);    
+                console.log("not user"+result.rows.length);    
             }
             else{
-                console.log("already user"+result.rows.lenght);                
+                console.log("already user"+result.rows.length);                
             }
        }
     });
