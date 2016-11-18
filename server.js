@@ -195,6 +195,12 @@ app.post('/signup/user', function (req, res) {
        }
        else{
            console.log(rows);
+           if(rows === null){
+               console.log("null");
+           }
+           else{
+               console.log("In");
+           }
        }
     });
     pool.query('INSERT INTO "user" ("fname","lname","email","password") VALUES ($1,$2,$3,$4)',[fname,lname,email,dbString],function(err,rows){
