@@ -106,6 +106,7 @@ signup.onclick = function () {
                       signup.value = 'Sucess!';
                 } else if (request.status === 403) {
                       signup.value = 'Invalid credentials. Try again?';
+                      alert("User already Registered")
                 } else if (request.status === 500) {
                     alert('Something went wrong on the server');
                       signup.value = 'Login';
