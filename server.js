@@ -189,18 +189,17 @@ app.post('/signup/user', function (req, res) {
     var password = req.body.password;
     var salt = crypto.randomBytes(128).toString('hex');
     var dbString = hash(password, salt);
-    pool.query('SELECT * FROM "user" WHERE email = $1',[email],function(err,rows){
+    pool.query('SELECT * FROM "user" WHERE email = $1',[email],function(err,result){
        if(err){
            console.log(err);
        }
        else{
-           console.log(rows);
-           if(rows === null){
-               console.log("null");
-           }
-           else{
-               console.log("In");
-           }
+            if(result.rows.lenght === 0){
+                console.log("not user");    
+            }
+            else{
+                console.log("already user");                
+            }
        }
     });
     pool.query('INSERT INTO "user" ("fname","lname","email","password") VALUES ($1,$2,$3,$4)',[fname,lname,email,dbString],function(err,rows){
