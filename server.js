@@ -208,7 +208,8 @@ app.post('/signup/user', function (req, res) {
                 });
             }
             else{
-                console.log("already user"+result.rows.length);                
+                console.log("already user");
+                res.status(403).send('User is already Registered');
             }
        }
     });
