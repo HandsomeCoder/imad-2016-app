@@ -195,24 +195,24 @@ app.post('/signup/user', function (req, res) {
        }
        else{
             if(result.rows.length === 0){
-                console.log("not user"+result.rows.length);    
+                pool.query('INSERT INTO "user" ("fname","lname","email","password") VALUES ($1,$2,$3,$4)',[fname,lname,email,dbString],function(err,rows){
+                    if(err){
+                        console.log('Fail');
+                        res.sendFile(path.join(__dirname, 'ui/html', 'sign.html'));
+                        
+                    }
+                    else{
+                        console.log('Success');
+                        res.send(createBlog(checkLogin(req)));
+                    }
+                });
             }
             else{
                 console.log("already user"+result.rows.length);                
             }
        }
     });
-    pool.query('INSERT INTO "user" ("fname","lname","email","password") VALUES ($1,$2,$3,$4)',[fname,lname,email,dbString],function(err,rows){
-        if(err){
-            console.log('Fail');
-            res.sendFile(path.join(__dirname, 'ui/html', 'sign.html'));
-            
-        }
-        else{
-            console.log('Success');
-            res.send(createBlog(checkLogin(req)));
-        }
-    });
+
 });
 
 app.post('/signin/check', function (req, res) {
