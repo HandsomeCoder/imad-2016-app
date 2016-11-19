@@ -4,18 +4,33 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Sign Page</title>
-        <link rel="stylesheet" href="ui/css/site.css"/>
+        <link rel="stylesheet" href="site.css"/>
         <link rel="stylesheet" href="sign.css"/>
 
     </head>
     <body>
-
+        <nav>
+            <a href="/">
+                <div id="backButton" class="operationalButton">
+                    Home
+                </div>
+            </a>
+            <div id="pageTitle">
+                Register/Log In <span class="font-size-2">to write comment</span>
+            </div>
+            <a href="../../blog">
+                <div id="pageButton" class="operationalButton">
+                    Blog Page
+                </div>
+            </a>
+        </nav>
+        <div id="bodySection">
         <section id="signup">
             <center>
                 <table cellpadding="5">
                     <thead>
                         <tr>
-                            <th colspan="2"> Registration Form </th>
+                            <th colspan="2" class="font-size-2"> Registration Form </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -72,6 +87,7 @@
                         </tr>
                     </tfoot>
                 </table>
+                <p class="font-size-3"><i><b> All Fields are mandatory </b></i></p>
             </center>
         </section>
         <section id="signin">
@@ -79,7 +95,7 @@
                 <table cellpadding="5" >
                     <thead>
                         <tr>
-                            <th colspan="2">Log In</th>
+                            <th colspan="2" class="font-size-2">Log In</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -112,8 +128,11 @@
                         </tr>
                     </tfoot>
                 </table>
+                <p class="font-size-4"><b><i>In case you forget password refill the form<br>
+                            to override the password</i></b></p>
             </center>
         </section>
+        </div>
         <script type="text/javascript" src="ui/js/sign.js"></script>
     </body>
 </html>
