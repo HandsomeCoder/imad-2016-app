@@ -1,6 +1,7 @@
-body{
+#bodySection{
     display: flex;
 }
+
 
 section{
     margin-top: 90px;
@@ -17,6 +18,10 @@ section{
 
 table td:first-child{
     text-align: right;
+}
+
+thead th{
+    padding: 20px;
 }
 
 input[type=reset]{
