@@ -107,9 +107,9 @@ signup.onclick = function () {
                 } else if (request.status === 403) {
                       signup.value = 'Submit';
                       var c = confirm("User already Registered\n If you have forget password click on \"OK\" else \"Cancel\"");
-                      if(c == true){
+                      if(c === true){
                           var con = prompt("Enter \"CONFIRM\" to override the password"); 
-                          if(con == "confirm" || con == "CONFIRM"){
+                          if(con === "confirm" || con === "CONFIRM"){
                                 alert("Password Override! Try login with new password");
                           }
                       }
