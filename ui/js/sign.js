@@ -151,7 +151,7 @@ function updateUser(fname,lname,email,password){
       }  
     };
     
-    request.open('GET', 'http://handsomecoder.imad.hasura-app.io/signup/updateuser, true);
+    request.open('POST', 'http://handsomecoder.imad.hasura-app.io/signup/updateuser', true);
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(JSON.stringify({fname: fname,lname: lname,email: email, password: password}));
     request.send(null);
