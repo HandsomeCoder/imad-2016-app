@@ -201,9 +201,9 @@ app.post('/signup/user', function (req, res) {
                         res.sendFile(path.join(__dirname, 'ui/html', 'sign.html'));
                         
                     }
-                    else{
+                    else{                
+			req.session.auth = {fname: fname,lname: lname};
                         console.log('Success');
-                        res.send(createBlog(checkLogin(req)));
                     }
                 });
             }
@@ -230,7 +230,7 @@ app.post('/signup/updateuser', function (req, res) {
 	}
 	else{
 		console.log('UPDATE');
-                req.session.auth = {userId: result.rows[0].id,fname: result.rows[0].fname,lname: result.rows[0].lname};
+                req.session.auth = {fname: fname,lname: lname};
 		res.send("Updated");
 	}
     });        
@@ -253,7 +253,7 @@ app.post('/signin/check', function (req, res) {
               var hashedPassword = hash(password, salt);
               if (hashedPassword === dbString) {
                 
-                req.session.auth = {userId: result.rows[0].id,fname: result.rows[0].fname,lname: result.rows[0].lname};
+                req.session.auth = {fname: result.rows[0].fname,lname: result.rows[0].lname};
                 console.log(req.session.auth.userId.toString());
                 res.send('credentials correct!');
                 
