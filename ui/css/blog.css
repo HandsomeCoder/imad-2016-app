@@ -8,6 +8,9 @@ body{
 .hid{
 	visibility: hidden;
 }
+#username {
+    margin-right: 10px;
+}
 #menuBar{
     margin: 5px;
     width: 25%;
