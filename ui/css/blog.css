@@ -5,7 +5,9 @@ body{
     margin-top: 20px;
     display: flex;
 }
-
+.hid{
+	visibility: hidden;
+}
 #menuBar{
     margin: 5px;
     width: 25%;
