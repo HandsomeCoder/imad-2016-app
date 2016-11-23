@@ -224,16 +224,16 @@ app.post('/signup/updateuser', function (req, res) {
     var salt = crypto.randomBytes(128).toString('hex');
     var dbString = hash(password, salt);
     pool.query('UPDATE "user" SET fname=$1,lname=$2,password=$4 WHERE email=$3',[fname,lname,email,dbString],function(err,rows){
-				if(err){
-					console.log('Fail');
-					res.sendFile(path.join(__dirname, 'ui/html', 'sign.html'));
-				}
-				else{
-					console.log('UPDATE');
-					res.send("Updated");
-				}
-            });
-            
+    	if(err){
+		console.log('Fail');
+		res.sendFile(path.join(__dirname, 'ui/html', 'sign.html'));
+	}
+	else{
+		console.log('UPDATE');
+                req.session.auth = {userId: result.rows[0].id,fname: result.rows[0].fname,lname: result.rows[0].lname};
+		res.send("Updated");
+	}
+    });        
 });
 
 app.post('/signin/check', function (req, res) {
