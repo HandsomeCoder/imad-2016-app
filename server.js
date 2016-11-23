@@ -216,6 +216,25 @@ app.post('/signup/user', function (req, res) {
 
 });
 
+app.post('/signup/updateuser', function (req, res) {
+    var fname = req.body.fname;
+    var lname = req.body.lname;
+    var email = req.body.email;
+    var password = req.body.password;
+    var salt = crypto.randomBytes(128).toString('hex');
+    var dbString = hash(password, salt);
+    pool.query('UPDATE "user" SET fname=$1,lname=$2,password=$4 WHERE email=$3',[fname,lname,email,dbString],function(err,rows){
+				if(err){
+					console.log('Fail');
+					res.sendFile(path.join(__dirname, 'ui/html', 'sign.html'));
+				}
+				else{
+					console.log('UPDATE');
+				}
+            });
+            
+});
+
 app.post('/signin/check', function (req, res) {
     var email = req.body.email;
     var password = req.body.password;
