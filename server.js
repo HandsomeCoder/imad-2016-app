@@ -325,8 +325,8 @@ function createBlog(checkLogin){
             </nav>
                 <section id="container">
                     <section id="menuBar">
-                        <div class="center bold">
-                            Blog Titles
+                        <div class="center">
+                            <h1>Blog Titles</h1>
                         </div>
                         <div id="titleSection">
                         <ol id="blogTitle" start="1">
