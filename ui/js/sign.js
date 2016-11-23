@@ -108,6 +108,7 @@ signup.onclick = function () {
             if (request.readyState === XMLHttpRequest.DONE) {
                 if (request.status === 200) {
                       signup.value = 'Sucess!';
+                      window.location.assign("http://handsomecoder.imad.hasura-app.io/blog");
                 } else if (request.status === 403) {
                       signup.value = 'Submit';
                       var c = confirm("User already Registered\n If you have forget password click on \"OK\" else \"Cancel\"");
@@ -133,7 +134,7 @@ signup.onclick = function () {
             request.open('POST', 'http://handsomecoder.imad.hasura-app.io/signup/user', true);
             request.setRequestHeader('Content-Type', 'application/json');
             request.send(JSON.stringify({fname: fname,lname: lname,email: email, password: password}));  
-            signup.value = 'Logging in...';
+            signup.value = 'Registering...';
         }
 };
 
