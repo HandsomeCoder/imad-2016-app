@@ -304,7 +304,7 @@ function createBlog(checkLogin){
     }else{
         blogTemplate+=`<body onload="getTitle()" >
             <section id="loggedin">
-                <span>You are not Logged In.</span>
+                <span class="hid">You are not Logged In.</span>
         	</section>`;   
     }
   			
