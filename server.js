@@ -230,6 +230,7 @@ app.post('/signup/updateuser', function (req, res) {
 				}
 				else{
 					console.log('UPDATE');
+					res.send("Updated");
 				}
             });
             
