@@ -204,6 +204,7 @@ app.post('/signup/user', function (req, res) {
                     else{                
 			req.session.auth = {fname: fname,lname: lname};
                         console.log('Success');
+			res.send("success");
                     }
                 });
             }
