@@ -1,3 +1,15 @@
+resetup.onclick = function(){
+    document.getElementById('fname').value="";
+    document.getElementById('lname').value="";
+    document.getElementById('emailup').value="";
+    document.getElementById('passwordup').value="";
+    document.getElementById('cpassword').value="";
+};
+
+resetin.onclick = function(){
+    document.getElementById('emailin').value="";
+    document.getElementById('passwordin').value="";
+};
 function validateonsignup(){
     var fname = document.getElementById('fname');
     var lname = document.getElementById('lname');
