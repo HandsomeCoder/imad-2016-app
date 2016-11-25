@@ -127,19 +127,6 @@ app.get('/blog/q/comment', function (req, res) {
     });
 });
 
-app.get('/profile/comment', function (req, res) {
-    var name = req.query.name;
-    var comment = req.query.comment;
-    pool.query('INSERT INTO "profileComment" ("name", "comment") VALUES ($1,$2)',[name,comment],function(err,rows){
-        if(err){
-            console.log("fail");
-        }
-        else{
-            res.send(`success`);
-        }
-    });
-});
-
 app.get('/blog/q/fetchComment', function (req, res) {
     var blogId = req.query.blogId;
     var commentContent = ``; 
@@ -161,26 +148,6 @@ app.get('/blog/q/fetchComment', function (req, res) {
     });
 
 });
-
-app.get('/profile/fetchComment', function (req, res) {
-    var commentContent = ``; 
-    getResult('SELECT name,comment FROM "profileComment"',function(err,rows){
-        if(err){
-            
-        }
-        else{
-            for(var i = 0;i < rows.length;i++){
-                commentContent += `<span class="bold"> ${rows[i].name}:</span>
-                                   <br>
-                                   <span> ${rows[i].comment} </span>
-                                   <br><br>`;
-            }
-            res.send(commentContent);
-        }
-    });
-
-});
-
 
 app.post('/signup/user', function (req, res) {
     var fname = req.body.fname;
@@ -240,7 +207,6 @@ app.post('/signup/updateuser', function (req, res) {
 app.post('/signin/check', function (req, res) {
     var email = req.body.email;
     var password = req.body.password;
-    console.log("Data->"+email+" "+password);
     pool.query('SELECT * FROM "user" WHERE email = $1', [email], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
