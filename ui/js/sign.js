@@ -140,9 +140,6 @@ signup.onclick = function () {
                 }  
             };
         
-
-            console.log(fname);
-            console.log(password);
             request.open('POST', 'http://handsomecoder.imad.hasura-app.io/signup/user', true);
             request.setRequestHeader('Content-Type', 'application/json');
             request.send(JSON.stringify({fname: fname,lname: lname,email: email, password: password}));  
@@ -198,8 +195,6 @@ signin.onclick = function () {
         // Make the request
         var email = document.getElementById('emailin').value;
         var password = document.getElementById('passwordin').value;
-        console.log(email);
-        console.log(password);
         request.open('POST', 'http://handsomecoder.imad.hasura-app.io/signin/check', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({email: email,password: password}));  
