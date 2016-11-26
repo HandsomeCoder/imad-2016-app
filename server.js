@@ -342,7 +342,7 @@ function createBlogContent(data,checkLogin){
     var blogTemp=`<h1><span id="blogId">${id}</span>. ${title} </h1>
                   <p class="right-align margin" > ${date} </p>
                   <hr>
-                  <p class="margin">
+                  <p class="margin text-justify">
                     ${content}
                   </p>
                   <section id="commentSection" class="margin">
