@@ -22,6 +22,10 @@ body{
     min-height: 75vh;
 }
 
+.text-justify{
+    text-align: justify;
+}
+
 li{
     padding-top: 5px;
     padding-bottom: 5px;
